@@ -1,0 +1,866 @@
+{\rtf1\ansi\ansicpg874\cocoartf2859
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw9980\paperh14180\margl1440\margr1440\vieww30040\viewh16400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="th">\
+<head>\
+    <meta charset="UTF-8">\
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <title>K-Beauty Review Hub - \uc0\u3619 \u3637 \u3623 \u3636 \u3623 \u3626 \u3585 \u3636 \u3609 \u3649 \u3588 \u3619 \u3660 \u3648 \u3585 \u3634 \u3627 \u3621 \u3637 </title>\
+    <script src="https://cdn.tailwindcss.com"></script>\
+    <style>\
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap');\
+        \
+        body \{\
+            font-family: 'Noto Sans Thai', sans-serif;\
+        \}\
+        \
+        .crown-rating \{\
+            color: #FFD700;\
+            font-size: 1.5rem;\
+            cursor: pointer;\
+            transition: all 0.2s;\
+        \}\
+        \
+        .crown-rating:hover \{\
+            transform: scale(1.2);\
+        \}\
+        \
+        .crown-rating.active \{\
+            color: #FF6B6B;\
+        \}\
+        \
+        .gradient-bg \{\
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);\
+        \}\
+        \
+        .korean-pattern \{\
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M30 30c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20zm0 0c0 11.046 8.954 20 20 20s20-8.954 20-20-8.954-20-20-20-20 8.954-20 20z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");\
+        \}\
+        \
+        .video-container \{\
+            position: relative;\
+            width: 100%;\
+            height: 200px;\
+            background: #f3f4f6;\
+            border-radius: 8px;\
+            display: flex;\
+            align-items: center;\
+            justify-content: center;\
+            border: 2px dashed #d1d5db;\
+        \}\
+        \
+        .modal \{\
+            display: none;\
+            position: fixed;\
+            z-index: 1000;\
+            left: 0;\
+            top: 0;\
+            width: 100%;\
+            height: 100%;\
+            background-color: rgba(0,0,0,0.5);\
+        \}\
+        \
+        .modal.active \{\
+            display: flex;\
+            align-items: center;\
+            justify-content: center;\
+        \}\
+        \
+        .fade-in \{\
+            animation: fadeIn 0.5s ease-in;\
+        \}\
+        \
+        @keyframes fadeIn \{\
+            from \{ opacity: 0; transform: translateY(20px); \}\
+            to \{ opacity: 1; transform: translateY(0); \}\
+        \}\
+    </style>\
+</head>\
+<body class="bg-gray-50">\
+    <!-- Navigation -->\
+    <nav class="bg-white shadow-lg sticky top-0 z-50">\
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">\
+            <div class="flex justify-between h-16">\
+                <div class="flex items-center">\
+                    <div class="flex-shrink-0 flex items-center">\
+                        <span class="text-2xl">\uc0\u55357 \u56401 </span>\
+                        <span class="ml-2 text-xl font-bold text-purple-600">K-Beauty Review</span>\
+                    </div>\
+                </div>\
+                <div class="flex items-center space-x-4">\
+                    <button onclick="showSection('home')" class="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium">\uc0\u3627 \u3609 \u3657 \u3634 \u3649 \u3619 \u3585 </button>\
+                    <button onclick="showSection('reviews')" class="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium">\uc0\u3619 \u3637 \u3623 \u3636 \u3623 </button>\
+                    <button onclick="showSection('brands')" class="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium">\uc0\u3649 \u3610 \u3619 \u3609 \u3604 \u3660 </button>\
+                    <button onclick="openModal('loginModal')" class="bg-purple-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-purple-700">\uc0\u3648 \u3586 \u3657 \u3634 \u3626 \u3641 \u3656 \u3619 \u3632 \u3610 \u3610 </button>\
+                    <button onclick="openModal('registerModal')" class="bg-pink-500 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-pink-600">\uc0\u3626 \u3617 \u3633 \u3588 \u3619 \u3626 \u3617 \u3634 \u3594 \u3636 \u3585 </button>\
+                </div>\
+            </div>\
+        </div>\
+    </nav>\
+\
+    <!-- Landing Page -->\
+    <section id="home" class="section active">\
+        <!-- Hero Section -->\
+        <div class="gradient-bg korean-pattern">\
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">\
+                <div class="text-center">\
+                    <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">\
+                        \uc0\u3619 \u3637 \u3623 \u3636 \u3623 \u3626 \u3585 \u3636 \u3609 \u3649 \u3588 \u3619 \u3660 \u3648 \u3585 \u3634 \u3627 \u3621 \u3637 \
+                        <br>\
+                        <span class="text-pink-300">\uc0\u3607 \u3637 \u3656 \u3651 \u3627 \u3597 \u3656 \u3607 \u3637 \u3656 \u3626 \u3640 \u3604 </span>\
+                    </h1>\
+                    <p class="text-xl text-white mb-8 max-w-3xl mx-auto">\
+                        \uc0\u3588 \u3657 \u3609 \u3614 \u3610 \u3649 \u3621 \u3632 \u3649 \u3594 \u3619 \u3660 \u3611 \u3619 \u3632 \u3626 \u3610 \u3585 \u3634 \u3619 \u3603 \u3660 \u3585 \u3634 \u3619 \u3651 \u3594 \u3657 \u3626 \u3585 \u3636 \u3609 \u3649 \u3588 \u3619 \u3660 \u3648 \u3585 \u3634 \u3627 \u3621 \u3637 \u3592 \u3634 \u3585 \u3607 \u3640 \u3585 \u3649 \u3610 \u3619 \u3609 \u3604 \u3660 \u3604 \u3633 \u3591  \u3614 \u3619 \u3657 \u3629 \u3617 \u3619 \u3637 \u3623 \u3636 \u3623 \u3592 \u3619 \u3636 \u3591 \u3592 \u3634 \u3585 \u3612 \u3641 \u3657 \u3651 \u3594 \u3657 \u3591 \u3634 \u3609 \u3592 \u3619 \u3636 \u3591 \
+                    </p>\
+                    <div class="space-x-4">\
+                        <button onclick="showSection('reviews')" class="bg-white text-purple-600 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition duration-300">\
+                            \uc0\u3648 \u3619 \u3636 \u3656 \u3617 \u3619 \u3637 \u3623 \u3636 \u3623 \
+                        </button>\
+                        <button onclick="showSection('brands')" class="border-2 border-white text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-white hover:text-purple-600 transition duration-300">\
+                            \uc0\u3604 \u3641 \u3649 \u3610 \u3619 \u3609 \u3604 \u3660 \
+                        </button>\
+                    </div>\
+                </div>\
+            </div>\
+        </div>\
+\
+        <!-- Features Section -->\
+        <div class="py-20 bg-white">\
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">\
+                <div class="text-center mb-16">\
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">\uc0\u3607 \u3635 \u3652 \u3617 \u3605 \u3657 \u3629 \u3591 \u3648 \u3621 \u3639 \u3629 \u3585 \u3648 \u3619 \u3634 ?</h2>\
+                    <p class="text-xl text-gray-600">\uc0\u3615 \u3637 \u3648 \u3592 \u3629 \u3619 \u3660 \u3588 \u3619 \u3610 \u3588 \u3619 \u3633 \u3609 \u3626 \u3635 \u3627 \u3619 \u3633 \u3610 \u3585 \u3634 \u3619 \u3619 \u3637 \u3623 \u3636 \u3623 \u3626 \u3585 \u3636 \u3609 \u3649 \u3588 \u3619 \u3660 </p>\
+                </div>\
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">\
+                    <div class="text-center p-6 rounded-lg bg-purple-50">\
+                        <div class="text-4xl mb-4">\uc0\u55357 \u56568 </div>\
+                        <h3 class="text-xl font-semibold mb-2">\uc0\u3619 \u3637 \u3623 \u3636 \u3623 \u3604 \u3657 \u3623 \u3618 \u3619 \u3641 \u3611 \u3616 \u3634 \u3614 </h3>\
+                        <p class="text-gray-600">\uc0\u3629 \u3633 \u3614 \u3650 \u3627 \u3621 \u3604 \u3619 \u3641 \u3611 \u3616 \u3634 \u3614 \u3612 \u3621 \u3636 \u3605 \u3616 \u3633 \u3603 \u3601 \u3660 \u3649 \u3621 \u3632 \u3612 \u3621 \u3585 \u3634 \u3619 \u3651 \u3594 \u3657 \u3591 \u3634 \u3609 \u3592 \u3619 \u3636 \u3591 </p>\
+                    </div>\
+                    <div class="text-center p-6 rounded-lg bg-pink-50">\
+                        <div class="text-4xl mb-4">\uc0\u55356 \u57253 </div>\
+                        <h3 class="text-xl font-semibold mb-2">\uc0\u3619 \u3637 \u3623 \u3636 \u3623 \u3623 \u3637 \u3604 \u3637 \u3650 \u3629 </h3>\
+                        <p class="text-gray-600">\uc0\u3649 \u3594 \u3619 \u3660 \u3611 \u3619 \u3632 \u3626 \u3610 \u3585 \u3634 \u3619 \u3603 \u3660 \u3612 \u3656 \u3634 \u3609 \u3623 \u3637 \u3604 \u3637 \u3650 \u3629 \u3619 \u3637 \u3623 \u3636 \u3623 \u3607 \u3637 \u3656 \u3609 \u3656 \u3634 \u3626 \u3609 \u3651 \u3592 </p>\
+                    </div>\
+                    <div class="text-center p-6 rounded-lg bg-yellow-50">\
+                        <div class="text-4xl mb-4">\uc0\u55357 \u56401 </div>\
+                        <h3 class="text-xl font-semibold mb-2">\uc0\u3619 \u3632 \u3610 \u3610 \u3617 \u3591 \u3585 \u3640 \u3598 </h3>\
+                        <p class="text-gray-600">\uc0\u3651 \u3627 \u3657 \u3588 \u3632 \u3649 \u3609 \u3609 \u3604 \u3657 \u3623 \u3618 \u3617 \u3591 \u3585 \u3640 \u3598 \u3649 \u3607 \u3609 \u3604 \u3634 \u3623 \u3649 \u3610 \u3610 \u3648 \u3585 \u3634 \u3627 \u3621 \u3637 </p>\
+                    </div>\
+                </div>\
+            </div>\
+        </div>\
+\
+        <!-- Popular Brands -->\
+        <div class="py-20 bg-gray-50">\
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">\
+                <div class="text-center mb-16">\
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">\uc0\u3649 \u3610 \u3619 \u3609 \u3604 \u3660 \u3618 \u3629 \u3604 \u3609 \u3636 \u3618 \u3617 </h2>\
+                </div>\
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">\
+                    <div class="bg-white p-4 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300">\
+                        <div class="text-2xl mb-2">\uc0\u55356 \u57144 </div>\
+                        <p class="font-semibold">Innisfree</p>\
+                    </div>\
+                    <div class="bg-white p-4 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300">\
+                        <div class="text-2xl mb-2">\uc0\u10024 </div>\
+                        <p class="font-semibold">Laneige</p>\
+                    </div>\
+                    <div class="bg-white p-4 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300">\
+                        <div class="text-2xl mb-2">\uc0\u55356 \u57155 </div>\
+                        <p class="font-semibold">The Face Shop</p>\
+                    </div>\
+                    <div class="bg-white p-4 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300">\
+                        <div class="text-2xl mb-2">\uc0\u55357 \u56462 </div>\
+                        <p class="font-semibold">Sulwhasoo</p>\
+                    </div>\
+                    <div class="bg-white p-4 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300">\
+                        <div class="text-2xl mb-2">\uc0\u55356 \u57146 </div>\
+                        <p class="font-semibold">Etude House</p>\
+                    </div>\
+                    <div class="bg-white p-4 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300">\
+                        <div class="text-2xl mb-2">\uc0\u55356 \u57227 </div>\
+                        <p class="font-semibold">Missha</p>\
+                    </div>\
+                </div>\
+            </div>\
+        </div>\
+    </section>\
+\
+    <!-- Reviews Section -->\
+    <section id="reviews" class="section">\
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">\
+            <div class="flex justify-between items-center mb-8">\
+                <h1 class="text-3xl font-bold text-gray-900">\uc0\u3619 \u3637 \u3623 \u3636 \u3623 \u3626 \u3585 \u3636 \u3609 \u3649 \u3588 \u3619 \u3660 </h1>\
+                <button onclick="openModal('reviewModal')" class="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition duration-300">\
+                    + \uc0\u3648 \u3586 \u3637 \u3618 \u3609 \u3619 \u3637 \u3623 \u3636 \u3623 \
+                </button>\
+            </div>\
+\
+            <!-- Filter Tabs -->\
+            <div class="flex space-x-4 mb-8 border-b">\
+                <button class="pb-2 px-1 border-b-2 border-purple-600 text-purple-600 font-semibold">\uc0\u3607 \u3633 \u3657 \u3591 \u3627 \u3617 \u3604 </button>\
+                <button class="pb-2 px-1 text-gray-500 hover:text-gray-700">\uc0\u3648 \u3595 \u3619 \u3633 \u3656 \u3617 </button>\
+                <button class="pb-2 px-1 text-gray-500 hover:text-gray-700">\uc0\u3588 \u3619 \u3637 \u3617 </button>\
+                <button class="pb-2 px-1 text-gray-500 hover:text-gray-700">\uc0\u3650 \u3607 \u3609 \u3648 \u3609 \u3629 \u3619 \u3660 </button>\
+                <button class="pb-2 px-1 text-gray-500 hover:text-gray-700">\uc0\u3617 \u3634 \u3626 \u3660 \u3585 </button>\
+            </div>\
+\
+            <!-- Reviews Grid -->\
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="reviewsContainer">\
+                <!-- Sample Review 1 -->\
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">\
+                    <div class="h-48 bg-gradient-to-r from-pink-200 to-purple-200 flex items-center justify-center">\
+                        <span class="text-6xl">\uc0\u55358 \u56820 </span>\
+                    </div>\
+                    <div class="p-6">\
+                        <div class="flex items-center justify-between mb-2">\
+                            <h3 class="text-lg font-semibold">Laneige Water Sleeping Mask</h3>\
+                            <div class="flex">\
+                                <span class="crown-rating active">\uc0\u55357 \u56401 </span>\
+                                <span class="crown-rating active">\uc0\u55357 \u56401 </span>\
+                                <span class="crown-rating active">\uc0\u55357 \u56401 </span>\
+                                <span class="crown-rating active">\uc0\u55357 \u56401 </span>\
+                                <span class="crown-rating">\uc0\u55357 \u56401 </span>\
+                            </div>\
+                        </div>\
+                        <p class="text-gray-600 mb-4">\uc0\u3651 \u3594 \u3657 \u3617 \u3634  2 \u3648 \u3604 \u3639 \u3629 \u3609 \u3649 \u3621 \u3657 \u3623  \u3612 \u3636 \u3623 \u3594 \u3640 \u3656 \u3617 \u3594 \u3639 \u3657 \u3609 \u3586 \u3638 \u3657 \u3609 \u3617 \u3634 \u3585 ! \u3649 \u3609 \u3632 \u3609 \u3635 \u3626 \u3635 \u3627 \u3619 \u3633 \u3610 \u3588 \u3609 \u3612 \u3636 \u3623 \u3649 \u3627 \u3657 \u3591 </p>\
+                        <div class="flex items-center justify-between">\
+                            <div class="flex items-center">\
+                                <div class="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-white text-sm font-semibold">\
+                                    A\
+                                </div>\
+                                <span class="ml-2 text-sm text-gray-600">Anna_beauty</span>\
+                            </div>\
+                            <button onclick="showComments(1)" class="text-purple-600 text-sm hover:underline">\uc0\u55357 \u56492  12 \u3588 \u3623 \u3634 \u3617 \u3588 \u3636 \u3604 \u3648 \u3627 \u3655 \u3609 </button>\
+                        </div>\
+                    </div>\
+                </div>\
+\
+                <!-- Sample Review 2 -->\
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">\
+                    <div class="h-48 bg-gradient-to-r from-green-200 to-blue-200 flex items-center justify-center">\
+                        <span class="text-6xl">\uc0\u55358 \u56810 </span>\
+                    </div>\
+                    <div class="p-6">\
+                        <div class="flex items-center justify-between mb-2">\
+                            <h3 class="text-lg font-semibold">Innisfree Green Tea Serum</h3>\
+                            <div class="flex">\
+                                <span class="crown-rating active">\uc0\u55357 \u56401 </span>\
+                                <span class="crown-rating active">\uc0\u55357 \u56401 </span>\
+                                <span class="crown-rating active">\uc0\u55357 \u56401 </span>\
+                                <span class="crown-rating active">\uc0\u55357 \u56401 </span>\
+                                <span class="crown-rating active">\uc0\u55357 \u56401 </span>\
+                            </div>\
+                        </div>\
+                        <p class="text-gray-600 mb-4">\uc0\u3648 \u3595 \u3619 \u3633 \u3656 \u3617 \u3607 \u3637 \u3656 \u3604 \u3637 \u3607 \u3637 \u3656 \u3626 \u3640 \u3604 \u3607 \u3637 \u3656 \u3648 \u3588 \u3618 \u3651 \u3594 \u3657 ! \u3612 \u3636 \u3623 \u3651 \u3626 \u3586 \u3638 \u3657 \u3609 \u3648 \u3627 \u3655 \u3609 \u3652 \u3604 \u3657 \u3594 \u3633 \u3604  \u3619 \u3641 \u3586 \u3640 \u3617 \u3586 \u3609 \u3648 \u3621 \u3655 \u3585 \u3621 \u3591 </p>\
+                        <div class="flex items-center justify-between">\
+                            <div class="flex items-center">\
+                                <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white text-sm font-semibold">\
+                                    S\
+                                </div>\
+                                <span class="ml-2 text-sm text-gray-600">SkinCare_lover</span>\
+                            </div>\
+                            <button onclick="showComments(2)" class="text-purple-600 text-sm hover:underline">\uc0\u55357 \u56492  8 \u3588 \u3623 \u3634 \u3617 \u3588 \u3636 \u3604 \u3648 \u3627 \u3655 \u3609 </button>\
+                        </div>\
+                    </div>\
+                </div>\
+\
+                <!-- Sample Review 3 -->\
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">\
+                    <div class="h-48 bg-gradient-to-r from-yellow-200 to-orange-200 flex items-center justify-center">\
+                        <span class="text-6xl">\uc0\u55356 \u57199 </span>\
+                    </div>\
+                    <div class="p-6">\
+                        <div class="flex items-center justify-between mb-2">\
+                            <h3 class="text-lg font-semibold">Etude House Honey Cera Cream</h3>\
+                            <div class="flex">\
+                                <span class="crown-rating active">\uc0\u55357 \u56401 </span>\
+                                <span class="crown-rating active">\uc0\u55357 \u56401 </span>\
+                                <span class="crown-rating active">\uc0\u55357 \u56401 </span>\
+                                <span class="crown-rating">\uc0\u55357 \u56401 </span>\
+                                <span class="crown-rating">\uc0\u55357 \u56401 </span>\
+                            </div>\
+                        </div>\
+                        <p class="text-gray-600 mb-4">\uc0\u3588 \u3619 \u3637 \u3617 \u3610 \u3635 \u3619 \u3640 \u3591 \u3607 \u3637 \u3656 \u3604 \u3637  \u3649 \u3605 \u3656 \u3629 \u3634 \u3592 \u3592 \u3632 \u3627 \u3609 \u3633 \u3585 \u3652 \u3611 \u3626 \u3635 \u3627 \u3619 \u3633 \u3610 \u3612 \u3636 \u3623 \u3617 \u3633 \u3609  \u3648 \u3627 \u3617 \u3634 \u3632 \u3585 \u3633 \u3610 \u3612 \u3636 \u3623 \u3649 \u3627 \u3657 \u3591 </p>\
+                        <div class="flex items-center justify-between">\
+                            <div class="flex items-center">\
+                                <div class="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center text-white text-sm font-semibold">\
+                                    M\
+                                </div>\
+                                <span class="ml-2 text-sm text-gray-600">MinKBeauty</span>\
+                            </div>\
+                            <button onclick="showComments(3)" class="text-purple-600 text-sm hover:underline">\uc0\u55357 \u56492  5 \u3588 \u3623 \u3634 \u3617 \u3588 \u3636 \u3604 \u3648 \u3627 \u3655 \u3609 </button>\
+                        </div>\
+                    </div>\
+                </div>\
+            </div>\
+        </div>\
+    </section>\
+\
+    <!-- Brands Section -->\
+    <section id="brands" class="section">\
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">\
+            <h1 class="text-3xl font-bold text-gray-900 mb-8">\uc0\u3649 \u3610 \u3619 \u3609 \u3604 \u3660 \u3626 \u3585 \u3636 \u3609 \u3649 \u3588 \u3619 \u3660 \u3648 \u3585 \u3634 \u3627 \u3621 \u3637 </h1>\
+            \
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">\
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">\
+                    <div class="flex items-center mb-4">\
+                        <div class="text-3xl mr-4">\uc0\u55356 \u57144 </div>\
+                        <div>\
+                            <h3 class="text-xl font-semibold">Innisfree</h3>\
+                            <p class="text-gray-600">Natural Beauty</p>\
+                        </div>\
+                    </div>\
+                    <p class="text-gray-700 mb-4">\uc0\u3649 \u3610 \u3619 \u3609 \u3604 \u3660 \u3608 \u3619 \u3619 \u3617 \u3594 \u3634 \u3605 \u3636 \u3592 \u3634 \u3585 \u3648 \u3585 \u3634 \u3632 \u3648 \u3594 \u3592 \u3641  \u3612 \u3621 \u3636 \u3605 \u3616 \u3633 \u3603 \u3601 \u3660 \u3592 \u3634 \u3585 \u3608 \u3619 \u3619 \u3617 \u3594 \u3634 \u3605 \u3636  100%</p>\
+                    <div class="flex justify-between items-center">\
+                        <span class="text-sm text-gray-500">234 \uc0\u3619 \u3637 \u3623 \u3636 \u3623 </span>\
+                        <button class="text-purple-600 hover:underline">\uc0\u3604 \u3641 \u3619 \u3637 \u3623 \u3636 \u3623 </button>\
+                    </div>\
+                </div>\
+\
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">\
+                    <div class="flex items-center mb-4">\
+                        <div class="text-3xl mr-4">\uc0\u10024 </div>\
+                        <div>\
+                            <h3 class="text-xl font-semibold">Laneige</h3>\
+                            <p class="text-gray-600">Water Science</p>\
+                        </div>\
+                    </div>\
+                    <p class="text-gray-700 mb-4">\uc0\u3612 \u3641 \u3657 \u3648 \u3594 \u3637 \u3656 \u3618 \u3623 \u3594 \u3634 \u3597 \u3604 \u3657 \u3634 \u3609 \u3585 \u3634 \u3619 \u3610 \u3635 \u3619 \u3640 \u3591 \u3612 \u3636 \u3623 \u3604 \u3657 \u3623 \u3618 \u3609 \u3657 \u3635  \u3648 \u3607 \u3588 \u3650 \u3609 \u3650 \u3621 \u3618 \u3637 \u3585 \u3634 \u3619 \u3610 \u3635 \u3619 \u3640 \u3591 \u3586 \u3633 \u3657 \u3609 \u3626 \u3641 \u3591 </p>\
+                    <div class="flex justify-between items-center">\
+                        <span class="text-sm text-gray-500">189 \uc0\u3619 \u3637 \u3623 \u3636 \u3623 </span>\
+                        <button class="text-purple-600 hover:underline">\uc0\u3604 \u3641 \u3619 \u3637 \u3623 \u3636 \u3623 </button>\
+                    </div>\
+                </div>\
+\
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">\
+                    <div class="flex items-center mb-4">\
+                        <div class="text-3xl mr-4">\uc0\u55357 \u56462 </div>\
+                        <div>\
+                            <h3 class="text-xl font-semibold">Sulwhasoo</h3>\
+                            <p class="text-gray-600">Luxury Herbal</p>\
+                        </div>\
+                    </div>\
+                    <p class="text-gray-700 mb-4">\uc0\u3649 \u3610 \u3619 \u3609 \u3604 \u3660 \u3627 \u3619 \u3641 \u3592 \u3634 \u3585 \u3626 \u3617 \u3640 \u3609 \u3652 \u3614 \u3619 \u3648 \u3585 \u3634 \u3627 \u3621 \u3637  \u3648 \u3614 \u3639 \u3656 \u3629 \u3612 \u3636 \u3623 \u3607 \u3637 \u3656 \u3626 \u3617 \u3610 \u3641 \u3619 \u3603 \u3660 \u3649 \u3610 \u3610 </p>\
+                    <div class="flex justify-between items-center">\
+                        <span class="text-sm text-gray-500">156 \uc0\u3619 \u3637 \u3623 \u3636 \u3623 </span>\
+                        <button class="text-purple-600 hover:underline">\uc0\u3604 \u3641 \u3619 \u3637 \u3623 \u3636 \u3623 </button>\
+                    </div>\
+                </div>\
+\
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">\
+                    <div class="flex items-center mb-4">\
+                        <div class="text-3xl mr-4">\uc0\u55356 \u57146 </div>\
+                        <div>\
+                            <h3 class="text-xl font-semibold">Etude House</h3>\
+                            <p class="text-gray-600">Sweet & Playful</p>\
+                        </div>\
+                    </div>\
+                    <p class="text-gray-700 mb-4">\uc0\u3649 \u3610 \u3619 \u3609 \u3604 \u3660 \u3609 \u3656 \u3634 \u3619 \u3633 \u3585 \u3626 \u3635 \u3627 \u3619 \u3633 \u3610 \u3626 \u3634 \u3623 \u3654  \u3612 \u3621 \u3636 \u3605 \u3616 \u3633 \u3603 \u3601 \u3660 \u3627 \u3621 \u3634 \u3585 \u3627 \u3621 \u3634 \u3618 \u3651 \u3609 \u3619 \u3634 \u3588 \u3634 \u3648 \u3586 \u3657 \u3634 \u3606 \u3638 \u3591 \u3652 \u3604 \u3657 </p>\
+                    <div class="flex justify-between items-center">\
+                        <span class="text-sm text-gray-500">298 \uc0\u3619 \u3637 \u3623 \u3636 \u3623 </span>\
+                        <button class="text-purple-600 hover:underline">\uc0\u3604 \u3641 \u3619 \u3637 \u3623 \u3636 \u3623 </button>\
+                    </div>\
+                </div>\
+\
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">\
+                    <div class="flex items-center mb-4">\
+                        <div class="text-3xl mr-4">\uc0\u55356 \u57155 </div>\
+                        <div>\
+                            <h3 class="text-xl font-semibold">The Face Shop</h3>\
+                            <p class="text-gray-600">Natural Story</p>\
+                        </div>\
+                    </div>\
+                    <p class="text-gray-700 mb-4">\uc0\u3612 \u3621 \u3636 \u3605 \u3616 \u3633 \u3603 \u3601 \u3660 \u3592 \u3634 \u3585 \u3608 \u3619 \u3619 \u3617 \u3594 \u3634 \u3605 \u3636  \u3588 \u3640 \u3603 \u3616 \u3634 \u3614 \u3604 \u3637 \u3651 \u3609 \u3619 \u3634 \u3588 \u3634 \u3607 \u3637 \u3656 \u3648 \u3627 \u3617 \u3634 \u3632 \u3626 \u3617 </p>\
+                    <div class="flex justify-between items-center">\
+                        <span class="text-sm text-gray-500">167 \uc0\u3619 \u3637 \u3623 \u3636 \u3623 </span>\
+                        <button class="text-purple-600 hover:underline">\uc0\u3604 \u3641 \u3619 \u3637 \u3623 \u3636 \u3623 </button>\
+                    </div>\
+                </div>\
+\
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">\
+                    <div class="flex items-center mb-4">\
+                        <div class="text-3xl mr-4">\uc0\u55356 \u57227 </div>\
+                        <div>\
+                            <h3 class="text-xl font-semibold">Missha</h3>\
+                            <p class="text-gray-600">Time Revolution</p>\
+                        </div>\
+                    </div>\
+                    <p class="text-gray-700 mb-4">\uc0\u3612 \u3641 \u3657 \u3609 \u3635 \u3604 \u3657 \u3634 \u3609 \u3585 \u3634 \u3619 \u3605 \u3656 \u3629 \u3605 \u3657 \u3634 \u3609 \u3619 \u3636 \u3657 \u3623 \u3619 \u3629 \u3618  \u3648 \u3607 \u3588 \u3650 \u3609 \u3650 \u3621 \u3618 \u3637 \u3585 \u3634 \u3619 \u3610 \u3635 \u3619 \u3640 \u3591 \u3612 \u3636 \u3623 \u3586 \u3633 \u3657 \u3609 \u3626 \u3641 \u3591 </p>\
+                    <div class="flex justify-between items-center">\
+                        <span class="text-sm text-gray-500">203 \uc0\u3619 \u3637 \u3623 \u3636 \u3623 </span>\
+                        <button class="text-purple-600 hover:underline">\uc0\u3604 \u3641 \u3619 \u3637 \u3623 \u3636 \u3623 </button>\
+                    </div>\
+                </div>\
+            </div>\
+        </div>\
+    </section>\
+\
+    <!-- Login Modal -->\
+    <div id="loginModal" class="modal">\
+        <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4">\
+            <div class="flex justify-between items-center mb-6">\
+                <h2 class="text-2xl font-bold text-gray-900">\uc0\u3648 \u3586 \u3657 \u3634 \u3626 \u3641 \u3656 \u3619 \u3632 \u3610 \u3610 </h2>\
+                <button onclick="closeModal('loginModal')" class="text-gray-400 hover:text-gray-600">\
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">\
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>\
+                    </svg>\
+                </button>\
+            </div>\
+            <form onsubmit="handleLogin(event)">\
+                <div class="mb-4">\
+                    <label class="block text-gray-700 text-sm font-bold mb-2">\uc0\u3629 \u3637 \u3648 \u3617 \u3621 </label>\
+                    <input type="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600" required>\
+                </div>\
+                <div class="mb-6">\
+                    <label class="block text-gray-700 text-sm font-bold mb-2">\uc0\u3619 \u3627 \u3633 \u3626 \u3612 \u3656 \u3634 \u3609 </label>\
+                    <input type="password" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600" required>\
+                </div>\
+                <button type="submit" class="w-full bg-purple-600 text-white py-2 px-4 rounded-md hover:bg-purple-700 transition duration-300">\
+                    \uc0\u3648 \u3586 \u3657 \u3634 \u3626 \u3641 \u3656 \u3619 \u3632 \u3610 \u3610 \
+                </button>\
+            </form>\
+            <p class="mt-4 text-center text-sm text-gray-600">\
+                \uc0\u3618 \u3633 \u3591 \u3652 \u3617 \u3656 \u3617 \u3637 \u3610 \u3633 \u3597 \u3594 \u3637 ? \
+                <button onclick="closeModal('loginModal'); openModal('registerModal')" class="text-purple-600 hover:underline">\uc0\u3626 \u3617 \u3633 \u3588 \u3619 \u3626 \u3617 \u3634 \u3594 \u3636 \u3585 </button>\
+            </p>\
+        </div>\
+    </div>\
+\
+    <!-- Register Modal -->\
+    <div id="registerModal" class="modal">\
+        <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4">\
+            <div class="flex justify-between items-center mb-6">\
+                <h2 class="text-2xl font-bold text-gray-900">\uc0\u3626 \u3617 \u3633 \u3588 \u3619 \u3626 \u3617 \u3634 \u3594 \u3636 \u3585 </h2>\
+                <button onclick="closeModal('registerModal')" class="text-gray-400 hover:text-gray-600">\
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">\
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>\
+                    </svg>\
+                </button>\
+            </div>\
+            <form onsubmit="handleRegister(event)">\
+                <div class="mb-4">\
+                    <label class="block text-gray-700 text-sm font-bold mb-2">\uc0\u3594 \u3639 \u3656 \u3629 \u3612 \u3641 \u3657 \u3651 \u3594 \u3657 </label>\
+                    <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600" required>\
+                </div>\
+                <div class="mb-4">\
+                    <label class="block text-gray-700 text-sm font-bold mb-2">\uc0\u3629 \u3637 \u3648 \u3617 \u3621 </label>\
+                    <input type="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600" required>\
+                </div>\
+                <div class="mb-4">\
+                    <label class="block text-gray-700 text-sm font-bold mb-2">\uc0\u3619 \u3627 \u3633 \u3626 \u3612 \u3656 \u3634 \u3609 </label>\
+                    <input type="password" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600" required>\
+                </div>\
+                <div class="mb-6">\
+                    <label class="block text-gray-700 text-sm font-bold mb-2">\uc0\u3618 \u3639 \u3609 \u3618 \u3633 \u3609 \u3619 \u3627 \u3633 \u3626 \u3612 \u3656 \u3634 \u3609 </label>\
+                    <input type="password" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600" required>\
+                </div>\
+                <button type="submit" class="w-full bg-pink-500 text-white py-2 px-4 rounded-md hover:bg-pink-600 transition duration-300">\
+                    \uc0\u3626 \u3617 \u3633 \u3588 \u3619 \u3626 \u3617 \u3634 \u3594 \u3636 \u3585 \
+                </button>\
+            </form>\
+            <p class="mt-4 text-center text-sm text-gray-600">\
+                \uc0\u3617 \u3637 \u3610 \u3633 \u3597 \u3594 \u3637 \u3649 \u3621 \u3657 \u3623 ? \
+                <button onclick="closeModal('registerModal'); openModal('loginModal')" class="text-purple-600 hover:underline">\uc0\u3648 \u3586 \u3657 \u3634 \u3626 \u3641 \u3656 \u3619 \u3632 \u3610 \u3610 </button>\
+            </p>\
+        </div>\
+    </div>\
+\
+    <!-- Review Modal -->\
+    <div id="reviewModal" class="modal">\
+        <div class="bg-white rounded-lg p-8 max-w-2xl w-full mx-4 max-h-screen overflow-y-auto">\
+            <div class="flex justify-between items-center mb-6">\
+                <h2 class="text-2xl font-bold text-gray-900">\uc0\u3648 \u3586 \u3637 \u3618 \u3609 \u3619 \u3637 \u3623 \u3636 \u3623 \u3626 \u3585 \u3636 \u3609 \u3649 \u3588 \u3619 \u3660 </h2>\
+                <button onclick="closeModal('reviewModal')" class="text-gray-400 hover:text-gray-600">\
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">\
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>\
+                    </svg>\
+                </button>\
+            </div>\
+            <form onsubmit="handleReviewSubmit(event)">\
+                <div class="mb-4">\
+                    <label class="block text-gray-700 text-sm font-bold mb-2">\uc0\u3594 \u3639 \u3656 \u3629 \u3612 \u3621 \u3636 \u3605 \u3616 \u3633 \u3603 \u3601 \u3660 </label>\
+                    <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600" placeholder="\uc0\u3648 \u3594 \u3656 \u3609  Laneige Water Sleeping Mask" required>\
+                </div>\
+                \
+                <div class="mb-4">\
+                    <label class="block text-gray-700 text-sm font-bold mb-2">\uc0\u3649 \u3610 \u3619 \u3609 \u3604 \u3660 </label>\
+                    <select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600" required>\
+                        <option value="">\uc0\u3648 \u3621 \u3639 \u3629 \u3585 \u3649 \u3610 \u3619 \u3609 \u3604 \u3660 </option>\
+                        <option value="innisfree">Innisfree</option>\
+                        <option value="laneige">Laneige</option>\
+                        <option value="sulwhasoo">Sulwhasoo</option>\
+                        <option value="etude">Etude House</option>\
+                        <option value="faceshop">The Face Shop</option>\
+                        <option value="missha">Missha</option>\
+                    </select>\
+                </div>\
+\
+                <div class="mb-4">\
+                    <label class="block text-gray-700 text-sm font-bold mb-2">\uc0\u3611 \u3619 \u3632 \u3648 \u3616 \u3607 \u3612 \u3621 \u3636 \u3605 \u3616 \u3633 \u3603 \u3601 \u3660 </label>\
+                    <select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600" required>\
+                        <option value="">\uc0\u3648 \u3621 \u3639 \u3629 \u3585 \u3611 \u3619 \u3632 \u3648 \u3616 \u3607 </option>\
+                        <option value="serum">\uc0\u3648 \u3595 \u3619 \u3633 \u3656 \u3617 </option>\
+                        <option value="cream">\uc0\u3588 \u3619 \u3637 \u3617 </option>\
+                        <option value="toner">\uc0\u3650 \u3607 \u3609 \u3648 \u3609 \u3629 \u3619 \u3660 </option>\
+                        <option value="mask">\uc0\u3617 \u3634 \u3626 \u3660 \u3585 </option>\
+                        <option value="cleanser">\uc0\u3588 \u3621 \u3637 \u3609 \u3648 \u3595 \u3629 \u3619 \u3660 </option>\
+                        <option value="sunscreen">\uc0\u3588 \u3619 \u3637 \u3617 \u3585 \u3633 \u3609 \u3649 \u3604 \u3604 </option>\
+                    </select>\
+                </div>\
+\
+                <div class="mb-4">\
+                    <label class="block text-gray-700 text-sm font-bold mb-2">\uc0\u3651 \u3627 \u3657 \u3588 \u3632 \u3649 \u3609 \u3609 \u3604 \u3657 \u3623 \u3618 \u3617 \u3591 \u3585 \u3640 \u3598 </label>\
+                    <div class="flex space-x-2" id="crownRating">\
+                        <span class="crown-rating" data-rating="1">\uc0\u55357 \u56401 </span>\
+                        <span class="crown-rating" data-rating="2">\uc0\u55357 \u56401 </span>\
+                        <span class="crown-rating" data-rating="3">\uc0\u55357 \u56401 </span>\
+                        <span class="crown-rating" data-rating="4">\uc0\u55357 \u56401 </span>\
+                        <span class="crown-rating" data-rating="5">\uc0\u55357 \u56401 </span>\
+                    </div>\
+                </div>\
+\
+                <div class="mb-4">\
+                    <label class="block text-gray-700 text-sm font-bold mb-2">\uc0\u3619 \u3641 \u3611 \u3616 \u3634 \u3614 \u3612 \u3621 \u3636 \u3605 \u3616 \u3633 \u3603 \u3601 \u3660 </label>\
+                    <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">\
+                        <input type="file" id="imageUpload" accept="image/*" multiple class="hidden" onchange="handleImageUpload(event)">\
+                        <button type="button" onclick="document.getElementById('imageUpload').click()" class="text-purple-600 hover:text-purple-800">\
+                            \uc0\u55357 \u56568  \u3629 \u3633 \u3614 \u3650 \u3627 \u3621 \u3604 \u3619 \u3641 \u3611 \u3616 \u3634 \u3614  (\u3626 \u3634 \u3617 \u3634 \u3619 \u3606 \u3648 \u3621 \u3639 \u3629 \u3585 \u3627 \u3621 \u3634 \u3618 \u3619 \u3641 \u3611 )\
+                        </button>\
+                        <div id="imagePreview" class="mt-4 grid grid-cols-3 gap-2"></div>\
+                    </div>\
+                </div>\
+\
+                <div class="mb-4">\
+                    <label class="block text-gray-700 text-sm font-bold mb-2">\uc0\u3623 \u3637 \u3604 \u3637 \u3650 \u3629 \u3619 \u3637 \u3623 \u3636 \u3623  (\u3652 \u3617 \u3656 \u3610 \u3633 \u3591 \u3588 \u3633 \u3610 )</label>\
+                    <div class="video-container">\
+                        <input type="file" id="videoUpload" accept="video/*" class="hidden" onchange="handleVideoUpload(event)">\
+                        <button type="button" onclick="document.getElementById('videoUpload').click()" class="text-purple-600 hover:text-purple-800">\
+                            \uc0\u55356 \u57253  \u3629 \u3633 \u3614 \u3650 \u3627 \u3621 \u3604 \u3623 \u3637 \u3604 \u3637 \u3650 \u3629 \
+                        </button>\
+                        <div id="videoPreview" class="mt-2"></div>\
+                    </div>\
+                </div>\
+\
+                <div class="mb-6">\
+                    <label class="block text-gray-700 text-sm font-bold mb-2">\uc0\u3619 \u3637 \u3623 \u3636 \u3623 \u3586 \u3629 \u3591 \u3588 \u3640 \u3603 </label>\
+                    <textarea class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 h-32" placeholder="\uc0\u3649 \u3594 \u3619 \u3660 \u3611 \u3619 \u3632 \u3626 \u3610 \u3585 \u3634 \u3619 \u3603 \u3660 \u3585 \u3634 \u3619 \u3651 \u3594 \u3657 \u3612 \u3621 \u3636 \u3605 \u3616 \u3633 \u3603 \u3601 \u3660 \u3609 \u3637 \u3657 ..." required></textarea>\
+                </div>\
+\
+                <button type="submit" class="w-full bg-purple-600 text-white py-3 px-4 rounded-md hover:bg-purple-700 transition duration-300 font-semibold">\
+                    \uc0\u3650 \u3614 \u3626 \u3605 \u3660 \u3619 \u3637 \u3623 \u3636 \u3623 \
+                </button>\
+            </form>\
+        </div>\
+    </div>\
+\
+    <!-- Comments Modal -->\
+    <div id="commentsModal" class="modal">\
+        <div class="bg-white rounded-lg p-8 max-w-2xl w-full mx-4 max-h-screen overflow-y-auto">\
+            <div class="flex justify-between items-center mb-6">\
+                <h2 class="text-2xl font-bold text-gray-900">\uc0\u3588 \u3623 \u3634 \u3617 \u3588 \u3636 \u3604 \u3648 \u3627 \u3655 \u3609 </h2>\
+                <button onclick="closeModal('commentsModal')" class="text-gray-400 hover:text-gray-600">\
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">\
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>\
+                    </svg>\
+                </button>\
+            </div>\
+            \
+            <div id="commentsContainer" class="space-y-4 mb-6">\
+                <!-- Comments will be loaded here -->\
+            </div>\
+\
+            <div class="border-t pt-4">\
+                <form onsubmit="handleCommentSubmit(event)">\
+                    <textarea class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 h-20" placeholder="\uc0\u3649 \u3626 \u3604 \u3591 \u3588 \u3623 \u3634 \u3617 \u3588 \u3636 \u3604 \u3648 \u3627 \u3655 \u3609 ..." required></textarea>\
+                    <button type="submit" class="mt-2 bg-purple-600 text-white py-2 px-4 rounded-md hover:bg-purple-700 transition duration-300">\
+                        \uc0\u3650 \u3614 \u3626 \u3605 \u3660 \u3588 \u3623 \u3634 \u3617 \u3588 \u3636 \u3604 \u3648 \u3627 \u3655 \u3609 \
+                    </button>\
+                </form>\
+            </div>\
+        </div>\
+    </div>\
+\
+    <script>\
+        let currentRating = 0;\
+        let currentReviewId = null;\
+\
+        // Navigation\
+        function showSection(sectionId) \{\
+            document.querySelectorAll('.section').forEach(section => \{\
+                section.classList.remove('active');\
+                section.style.display = 'none';\
+            \});\
+            document.getElementById(sectionId).style.display = 'block';\
+            document.getElementById(sectionId).classList.add('active');\
+        \}\
+\
+        // Initialize\
+        document.addEventListener('DOMContentLoaded', function() \{\
+            showSection('home');\
+            setupCrownRating();\
+        \});\
+\
+        // Modal functions\
+        function openModal(modalId) \{\
+            document.getElementById(modalId).classList.add('active');\
+            document.body.style.overflow = 'hidden';\
+        \}\
+\
+        function closeModal(modalId) \{\
+            document.getElementById(modalId).classList.remove('active');\
+            document.body.style.overflow = 'auto';\
+        \}\
+\
+        // Crown rating system\
+        function setupCrownRating() \{\
+            const crowns = document.querySelectorAll('#crownRating .crown-rating');\
+            crowns.forEach((crown, index) => \{\
+                crown.addEventListener('click', function() \{\
+                    currentRating = index + 1;\
+                    updateCrownDisplay();\
+                \});\
+                \
+                crown.addEventListener('mouseenter', function() \{\
+                    highlightCrowns(index + 1);\
+                \});\
+            \});\
+\
+            document.getElementById('crownRating').addEventListener('mouseleave', function() \{\
+                updateCrownDisplay();\
+            \});\
+        \}\
+\
+        function highlightCrowns(rating) \{\
+            const crowns = document.querySelectorAll('#crownRating .crown-rating');\
+            crowns.forEach((crown, index) => \{\
+                if (index < rating) \{\
+                    crown.classList.add('active');\
+                \} else \{\
+                    crown.classList.remove('active');\
+                \}\
+            \});\
+        \}\
+\
+        function updateCrownDisplay() \{\
+            highlightCrowns(currentRating);\
+        \}\
+\
+        // Image upload handling\
+        function handleImageUpload(event) \{\
+            const files = event.target.files;\
+            const preview = document.getElementById('imagePreview');\
+            preview.innerHTML = '';\
+\
+            for (let i = 0; i < Math.min(files.length, 6); i++) \{\
+                const file = files[i];\
+                if (file.type.startsWith('image/')) \{\
+                    const reader = new FileReader();\
+                    reader.onload = function(e) \{\
+                        const img = document.createElement('div');\
+                        img.className = 'relative bg-gray-200 rounded-lg overflow-hidden aspect-square';\
+                        img.innerHTML = `\
+                            <div class="w-full h-full bg-gradient-to-br from-purple-200 to-pink-200 flex items-center justify-center">\
+                                <span class="text-2xl">\uc0\u55357 \u56764 \u65039 </span>\
+                            </div>\
+                            <button type="button" onclick="this.parentElement.remove()" class="absolute top-1 right-1 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">\'d7</button>\
+                        `;\
+                        preview.appendChild(img);\
+                    \};\
+                    reader.readAsDataURL(file);\
+                \}\
+            \}\
+        \}\
+\
+        // Video upload handling\
+        function handleVideoUpload(event) \{\
+            const file = event.target.files[0];\
+            const preview = document.getElementById('videoPreview');\
+            \
+            if (file && file.type.startsWith('video/')) \{\
+                preview.innerHTML = `\
+                    <div class="bg-gray-200 rounded-lg p-4 flex items-center justify-between">\
+                        <div class="flex items-center">\
+                            <span class="text-2xl mr-2">\uc0\u55356 \u57253 </span>\
+                            <span class="text-sm text-gray-600">$\{file.name\}</span>\
+                        </div>\
+                        <button type="button" onclick="this.parentElement.parentElement.innerHTML=''" class="text-red-500 hover:text-red-700">\uc0\u3621 \u3610 </button>\
+                    </div>\
+                `;\
+            \}\
+        \}\
+\
+        // Form submissions\
+        function handleLogin(event) \{\
+            event.preventDefault();\
+            alert('\uc0\u3619 \u3632 \u3610 \u3610 \u3648 \u3586 \u3657 \u3634 \u3626 \u3641 \u3656 \u3619 \u3632 \u3610 \u3610  - \u3609 \u3637 \u3656 \u3648 \u3611 \u3655 \u3609 \u3648 \u3604 \u3650 \u3617 \u3648 \u3607 \u3656 \u3634 \u3609 \u3633 \u3657 \u3609 ');\
+            closeModal('loginModal');\
+        \}\
+\
+        function handleRegister(event) \{\
+            event.preventDefault();\
+            alert('\uc0\u3619 \u3632 \u3610 \u3610 \u3626 \u3617 \u3633 \u3588 \u3619 \u3626 \u3617 \u3634 \u3594 \u3636 \u3585  - \u3609 \u3637 \u3656 \u3648 \u3611 \u3655 \u3609 \u3648 \u3604 \u3650 \u3617 \u3648 \u3607 \u3656 \u3634 \u3609 \u3633 \u3657 \u3609 ');\
+            closeModal('registerModal');\
+        \}\
+\
+        function handleReviewSubmit(event) \{\
+            event.preventDefault();\
+            \
+            if (currentRating === 0) \{\
+                alert('\uc0\u3585 \u3619 \u3640 \u3603 \u3634 \u3651 \u3627 \u3657 \u3588 \u3632 \u3649 \u3609 \u3609 \u3604 \u3657 \u3623 \u3618 \u3617 \u3591 \u3585 \u3640 \u3598 ');\
+                return;\
+            \}\
+\
+            // Create new review element\
+            const formData = new FormData(event.target);\
+            const productName = event.target.querySelector('input[type="text"]').value;\
+            const reviewText = event.target.querySelector('textarea').value;\
+            \
+            const newReview = createReviewElement(productName, reviewText, currentRating);\
+            document.getElementById('reviewsContainer').insertBefore(newReview, document.getElementById('reviewsContainer').firstChild);\
+            \
+            alert('\uc0\u3619 \u3637 \u3623 \u3636 \u3623 \u3586 \u3629 \u3591 \u3588 \u3640 \u3603 \u3606 \u3641 \u3585 \u3650 \u3614 \u3626 \u3605 \u3660 \u3648 \u3619 \u3637 \u3618 \u3610 \u3619 \u3657 \u3629 \u3618 \u3649 \u3621 \u3657 \u3623 !');\
+            closeModal('reviewModal');\
+            event.target.reset();\
+            currentRating = 0;\
+            updateCrownDisplay();\
+            document.getElementById('imagePreview').innerHTML = '';\
+            document.getElementById('videoPreview').innerHTML = '';\
+        \}\
+\
+        function createReviewElement(productName, reviewText, rating) \{\
+            const reviewDiv = document.createElement('div');\
+            reviewDiv.className = 'bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 fade-in';\
+            \
+            const crowns = '\uc0\u55357 \u56401 '.repeat(rating) + '\u55357 \u56401 '.repeat(5 - rating).replace(/\u55357 \u56401 /g, '<span class="crown-rating">\u55357 \u56401 </span>').replace(/\u55357 \u56401 /g, '<span class="crown-rating active">\u55357 \u56401 </span>');\
+            \
+            reviewDiv.innerHTML = `\
+                <div class="h-48 bg-gradient-to-r from-blue-200 to-purple-200 flex items-center justify-center">\
+                    <span class="text-6xl">\uc0\u10024 </span>\
+                </div>\
+                <div class="p-6">\
+                    <div class="flex items-center justify-between mb-2">\
+                        <h3 class="text-lg font-semibold">$\{productName\}</h3>\
+                        <div class="flex">\
+                            $\{'<span class="crown-rating active">\uc0\u55357 \u56401 </span>'.repeat(rating)\}\
+                            $\{'<span class="crown-rating">\uc0\u55357 \u56401 </span>'.repeat(5 - rating)\}\
+                        </div>\
+                    </div>\
+                    <p class="text-gray-600 mb-4">$\{reviewText\}</p>\
+                    <div class="flex items-center justify-between">\
+                        <div class="flex items-center">\
+                            <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-sm font-semibold">\
+                                U\
+                            </div>\
+                            <span class="ml-2 text-sm text-gray-600">\uc0\u3612 \u3641 \u3657 \u3651 \u3594 \u3657 \u3651 \u3627 \u3617 \u3656 </span>\
+                        </div>\
+                        <button onclick="showComments($\{Date.now()\})" class="text-purple-600 text-sm hover:underline">\uc0\u55357 \u56492  0 \u3588 \u3623 \u3634 \u3617 \u3588 \u3636 \u3604 \u3648 \u3627 \u3655 \u3609 </button>\
+                    </div>\
+                </div>\
+            `;\
+            \
+            return reviewDiv;\
+        \}\
+\
+        // Comments system\
+        function showComments(reviewId) \{\
+            currentReviewId = reviewId;\
+            loadComments(reviewId);\
+            openModal('commentsModal');\
+        \}\
+\
+        function loadComments(reviewId) \{\
+            const container = document.getElementById('commentsContainer');\
+            \
+            // Sample comments data\
+            const sampleComments = [\
+                \{\
+                    user: 'BeautyLover123',\
+                    avatar: 'B',\
+                    color: 'bg-pink-500',\
+                    comment: '\uc0\u3586 \u3629 \u3610 \u3588 \u3640 \u3603 \u3626 \u3635 \u3627 \u3619 \u3633 \u3610 \u3619 \u3637 \u3623 \u3636 \u3623 \u3588 \u3656 \u3632 ! \u3594 \u3656 \u3623 \u3618 \u3605 \u3633 \u3604 \u3626 \u3636 \u3609 \u3651 \u3592 \u3652 \u3604 \u3657 \u3617 \u3634 \u3585 ',\
+                    time: '2 \uc0\u3594 \u3633 \u3656 \u3623 \u3650 \u3617 \u3591 \u3607 \u3637 \u3656 \u3649 \u3621 \u3657 \u3623 '\
+                \},\
+                \{\
+                    user: 'SkinCareAddict',\
+                    avatar: 'S',\
+                    color: 'bg-green-500',\
+                    comment: '\uc0\u3648 \u3627 \u3655 \u3609 \u3604 \u3657 \u3623 \u3618 \u3648 \u3621 \u3618 ! \u3612 \u3621 \u3636 \u3605 \u3616 \u3633 \u3603 \u3601 \u3660 \u3609 \u3637 \u3657 \u3604 \u3637 \u3592 \u3619 \u3636 \u3591 \u3654 ',\
+                    time: '5 \uc0\u3594 \u3633 \u3656 \u3623 \u3650 \u3617 \u3591 \u3607 \u3637 \u3656 \u3649 \u3621 \u3657 \u3623 '\
+                \},\
+                \{\
+                    user: 'KBeautyFan',\
+                    avatar: 'K',\
+                    color: 'bg-purple-500',\
+                    comment: '\uc0\u3651 \u3594 \u3657 \u3617 \u3634  3 \u3648 \u3604 \u3639 \u3629 \u3609 \u3649 \u3621 \u3657 \u3623  \u3612 \u3621 \u3621 \u3633 \u3614 \u3608 \u3660 \u3604 \u3637 \u3617 \u3634 \u3585 \u3588 \u3656 \u3632 ',\
+                    time: '1 \uc0\u3623 \u3633 \u3609 \u3607 \u3637 \u3656 \u3649 \u3621 \u3657 \u3623 '\
+                \}\
+            ];\
+\
+            container.innerHTML = sampleComments.map(comment => `\
+                <div class="flex space-x-3 p-4 bg-gray-50 rounded-lg">\
+                    <div class="w-10 h-10 $\{comment.color\} rounded-full flex items-center justify-center text-white font-semibold">\
+                        $\{comment.avatar\}\
+                    </div>\
+                    <div class="flex-1">\
+                        <div class="flex items-center space-x-2 mb-1">\
+                            <span class="font-semibold text-gray-900">$\{comment.user\}</span>\
+                            <span class="text-sm text-gray-500">$\{comment.time\}</span>\
+                        </div>\
+                        <p class="text-gray-700">$\{comment.comment\}</p>\
+                        <div class="mt-2 flex space-x-4">\
+                            <button class="text-sm text-purple-600 hover:underline">\uc0\u55357 \u56397  \u3606 \u3641 \u3585 \u3651 \u3592 </button>\
+                            <button class="text-sm text-purple-600 hover:underline">\uc0\u55357 \u56492  \u3605 \u3629 \u3610 \u3585 \u3621 \u3633 \u3610 </button>\
+                        </div>\
+                    </div>\
+                </div>\
+            `).join('');\
+        \}\
+\
+        function handleCommentSubmit(event) \{\
+            event.preventDefault();\
+            const commentText = event.target.querySelector('textarea').value;\
+            \
+            if (commentText.trim()) \{\
+                const container = document.getElementById('commentsContainer');\
+                const newComment = document.createElement('div');\
+                newComment.className = 'flex space-x-3 p-4 bg-gray-50 rounded-lg fade-in';\
+                newComment.innerHTML = `\
+                    <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-semibold">\
+                        U\
+                    </div>\
+                    <div class="flex-1">\
+                        <div class="flex items-center space-x-2 mb-1">\
+                            <span class="font-semibold text-gray-900">\uc0\u3588 \u3640 \u3603 </span>\
+                            <span class="text-sm text-gray-500">\uc0\u3648 \u3617 \u3639 \u3656 \u3629 \u3626 \u3633 \u3585 \u3588 \u3619 \u3641 \u3656 </span>\
+                        </div>\
+                        <p class="text-gray-700">$\{commentText\}</p>\
+                        <div class="mt-2 flex space-x-4">\
+                            <button class="text-sm text-purple-600 hover:underline">\uc0\u55357 \u56397  \u3606 \u3641 \u3585 \u3651 \u3592 </button>\
+                            <button class="text-sm text-purple-600 hover:underline">\uc0\u55357 \u56492  \u3605 \u3629 \u3610 \u3585 \u3621 \u3633 \u3610 </button>\
+                        </div>\
+                    </div>\
+                `;\
+                \
+                container.insertBefore(newComment, container.firstChild);\
+                event.target.reset();\
+            \}\
+        \}\
+\
+        // Close modals when clicking outside\
+        document.addEventListener('click', function(event) \{\
+            if (event.target.classList.contains('modal')) \{\
+                event.target.classList.remove('active');\
+                document.body.style.overflow = 'auto';\
+            \}\
+        \});\
+    </script>\
+<script>(function()\{function c()\{var b=a.contentDocument||a.contentWindow.document;if(b)\{var d=b.createElement('script');d.innerHTML="window.__CF$cv$params=\{r:'960bba1e8185d014',t:'MTc1Mjc3NjE1MS4wMDAwMDA='\};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)\}\}if(document.body)\{var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else\{var e=document.onreadystatechange||function()\{\};document.onreadystatechange=function(b)\{e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())\}\}\}\})();</script></body>\
+</html>\
+}
