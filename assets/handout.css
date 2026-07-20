@@ -1,0 +1,284 @@
+/* ============================================================
+   handout.css — shared stylesheet for all student handouts
+   Used by: lessons/YYYY-MM-DD-<slug>/handout.html (2 levels deep)
+   Font paths are relative to THIS file, so they work from any
+   HTML location: url("fonts/…") → assets/fonts/…
+   Render with: tools/make_pdf.sh <handout.html>
+   ============================================================ */
+
+/* ---------- Bundled fonts (never rely on system fonts) ---------- */
+@font-face {
+  font-family: 'Sarabun';
+  src: url("fonts/Sarabun-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Sarabun';
+  src: url("fonts/Sarabun-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto Sans';
+  src: url("fonts/NotoSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto Sans';
+  src: url("fonts/NotoSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto Sans TC';
+  src: url("fonts/NotoSansTC-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto Sans TC';
+  src: url("fonts/NotoSansTC-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* ---------- Page setup ---------- */
+@page {
+  size: A4;
+  margin: 14mm;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* Latin first; Thai falls through to Sarabun; CJK falls through to Noto Sans TC */
+  font-family: 'Noto Sans', 'Sarabun', 'Noto Sans TC', sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.55;
+  color: #1a2333;
+}
+
+/* Thai script: Sarabun (looped letterforms — correct style for beginners),
+   slightly enlarged because Thai renders visually smaller than Latin */
+.th {
+  font-family: 'Sarabun', sans-serif;
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+/* Chinese gloss text */
+.zh {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+/* Paiboon romanization — always italic-free, Noto Sans covers ɛ ɔ ə ʉ + tone marks */
+.rom {
+  font-family: 'Noto Sans', sans-serif;
+  color: #40536e;
+}
+
+/* ---------- Header ---------- */
+header.handout-header {
+  border-bottom: 3px solid #14636b;
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+header.handout-header h1 {
+  font-size: 17pt;
+  margin: 0 0 2px 0;
+  color: #14636b;
+}
+header.handout-header .subtitle {
+  font-size: 10pt;
+  color: #40536e;
+  margin: 0;
+}
+header.handout-header .meta {
+  font-size: 8.5pt;
+  color: #6b7a90;
+  margin-top: 3px;
+}
+
+/* ---------- Sections ---------- */
+section { margin-bottom: 13px; }
+
+h2 {
+  font-size: 12pt;
+  color: #14636b;
+  border-left: 4px solid #14636b;
+  padding-left: 8px;
+  margin: 14px 0 7px 0;
+}
+
+h3 {
+  font-size: 10.5pt;
+  margin: 9px 0 4px 0;
+  color: #1a2333;
+}
+
+p { margin: 4px 0; }
+
+/* ---------- Vocabulary table ---------- */
+table.vocab {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 10pt;
+}
+table.vocab th {
+  background: #14636b;
+  color: #fff;
+  text-align: left;
+  padding: 4px 8px;
+  font-size: 9pt;
+}
+table.vocab td {
+  border-bottom: 1px solid #d8dfe8;
+  padding: 4px 8px;
+  vertical-align: top;
+}
+table.vocab tr:nth-child(even) td { background: #f4f7f9; }
+table.vocab td.th { font-size: 13pt; font-weight: 700; }
+table.vocab td.rom { white-space: nowrap; }
+
+/* ---------- Pattern box ---------- */
+.pattern-box {
+  border: 1.5px solid #14636b;
+  border-radius: 6px;
+  padding: 8px 12px;
+  background: #f2f8f8;
+  margin: 8px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.pattern-box .formula {
+  font-weight: 700;
+  font-size: 11pt;
+}
+
+/* ---------- Dialogue ---------- */
+.dialogue { margin: 8px 0; }
+.dialogue .turn {
+  display: flex;
+  margin-bottom: 7px;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.dialogue .speaker {
+  flex: 0 0 58px;
+  font-weight: 700;
+  color: #b3541e;
+  font-size: 9.5pt;
+  padding-top: 2px;
+}
+.dialogue .lines { flex: 1; }
+.dialogue .lines .th { display: block; }
+.dialogue .lines .rom { display: block; font-size: 9.5pt; }
+.dialogue .lines .en {
+  display: block;
+  font-size: 9pt;
+  color: #6b7a90;
+}
+
+/* ---------- Exercises ---------- */
+ol.exercise { padding-left: 20px; }
+ol.exercise li {
+  margin-bottom: 6px;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.blank {
+  display: inline-block;
+  min-width: 70px;
+  border-bottom: 1px solid #1a2333;
+}
+
+/* ---------- Culture / tip boxes ---------- */
+.culture-box, .tip-box {
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin: 8px 0;
+  font-size: 9.5pt;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.culture-box {
+  background: #fdf6ec;
+  border: 1.5px solid #d9a441;
+}
+.tip-box {
+  background: #eef3fb;
+  border: 1.5px solid #4a6fb5;
+}
+.culture-box .box-title, .tip-box .box-title {
+  font-weight: 700;
+  display: block;
+  margin-bottom: 2px;
+}
+
+/* ---------- Homework box ---------- */
+.homework-box {
+  border: 2px dashed #b3541e;
+  border-radius: 6px;
+  padding: 8px 12px;
+  background: #fff8f3;
+  margin: 10px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.homework-box .box-title {
+  font-weight: 700;
+  color: #b3541e;
+  display: block;
+  margin-bottom: 2px;
+}
+
+/* ---------- Footer: tone legend (placed once at the end of the handout;
+   Chromium headless does not reliably repeat position:fixed per page) ---------- */
+footer.tone-legend {
+  margin-top: 16px;
+  font-size: 8pt;
+  color: #40536e;
+  border-top: 1px solid #d8dfe8;
+  padding-top: 4px;
+  text-align: center;
+  page-break-inside: avoid;
+}
+footer.tone-legend .warn { color: #b3541e; }
+
+/* ---------- Doodles (inline SVG line-art, generated locally — no external images) ---------- */
+.doodle {
+  float: right;
+  margin: 0 0 6px 12px;
+}
+.doodle-icon {
+  vertical-align: -4px;
+  margin: 0 1px;
+}
+
+/* ---------- Print behavior ----------
+   Keep every boxed unit and every heading glued to its content so no card,
+   dialogue turn, or table row is ever split across a page break. */
+.page-break { page-break-before: always; }
+
+/* Headings never end a page orphaned from the content they introduce */
+h2, h3 {
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+/* Table rows and the header row stay intact */
+table.vocab tr {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+table.vocab thead { display: table-header-group; } /* repeat header if a table spans pages */
+
+/* Paragraphs don't leave a single dangling line at a page edge */
+p { orphans: 2; widows: 2; }
