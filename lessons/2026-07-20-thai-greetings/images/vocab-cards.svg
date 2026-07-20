@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" font-family="'Noto Sans Thai', 'Noto Sans', sans-serif">
+  <rect width="800" height="600" fill="#f4f7fb"/>
+
+  <!-- Title -->
+  <text x="400" y="42" font-size="30" font-weight="700" fill="#1e293b" text-anchor="middle">บัตรคำศัพท์การทักทาย (Greeting Vocabulary)</text>
+
+  <!-- ================= ROW 1 ================= -->
+  <!-- Card 1: สวัสดี -->
+  <g>
+    <rect x="22" y="70" width="175" height="246" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect x="22" y="70" width="175" height="9" rx="4" fill="#2563eb"/>
+    <text x="109" y="150" font-size="44" font-weight="700" fill="#0f172a" text-anchor="middle">สวัสดี</text>
+    <text x="109" y="188" font-size="19" fill="#2563eb" text-anchor="middle">sà-wàt-dii</text>
+    <text x="109" y="228" font-size="18" fill="#475569" text-anchor="middle">hello / bye</text>
+    <text x="109" y="272" font-size="24" fill="#b91c1c" text-anchor="middle">你好</text>
+  </g>
+
+  <!-- Card 2: ครับ -->
+  <g>
+    <rect x="215" y="70" width="175" height="246" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect x="215" y="70" width="175" height="9" rx="4" fill="#2563eb"/>
+    <text x="302" y="150" font-size="46" font-weight="700" fill="#0f172a" text-anchor="middle">ครับ</text>
+    <text x="302" y="188" font-size="19" fill="#2563eb" text-anchor="middle">khráp</text>
+    <text x="302" y="228" font-size="17" fill="#475569" text-anchor="middle">polite (male)</text>
+    <text x="302" y="272" font-size="24" fill="#b91c1c" text-anchor="middle">男性語尾</text>
+  </g>
+
+  <!-- Card 3: ค่ะ -->
+  <g>
+    <rect x="408" y="70" width="175" height="246" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect x="408" y="70" width="175" height="9" rx="4" fill="#db2777"/>
+    <text x="495" y="150" font-size="46" font-weight="700" fill="#0f172a" text-anchor="middle">ค่ะ</text>
+    <text x="495" y="188" font-size="19" fill="#db2777" text-anchor="middle">khâ</text>
+    <text x="495" y="228" font-size="16" fill="#475569" text-anchor="middle">female · statement</text>
+    <text x="495" y="272" font-size="24" fill="#b91c1c" text-anchor="middle">女性・陳述</text>
+  </g>
+
+  <!-- Card 4: คะ -->
+  <g>
+    <rect x="601" y="70" width="175" height="246" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect x="601" y="70" width="175" height="9" rx="4" fill="#db2777"/>
+    <text x="688" y="150" font-size="46" font-weight="700" fill="#0f172a" text-anchor="middle">คะ</text>
+    <text x="688" y="188" font-size="19" fill="#db2777" text-anchor="middle">khá</text>
+    <text x="688" y="228" font-size="16" fill="#475569" text-anchor="middle">female · question</text>
+    <text x="688" y="272" font-size="24" fill="#b91c1c" text-anchor="middle">女性・疑問</text>
+  </g>
+
+  <!-- ================= ROW 2 ================= -->
+  <!-- Card 5: ชื่อ -->
+  <g>
+    <rect x="22" y="334" width="175" height="246" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect x="22" y="334" width="175" height="9" rx="4" fill="#0891b2"/>
+    <text x="109" y="414" font-size="46" font-weight="700" fill="#0f172a" text-anchor="middle">ชื่อ</text>
+    <text x="109" y="452" font-size="19" fill="#0891b2" text-anchor="middle">chʉ̂ʉ</text>
+    <text x="109" y="492" font-size="18" fill="#475569" text-anchor="middle">name</text>
+    <text x="109" y="536" font-size="24" fill="#b91c1c" text-anchor="middle">名字</text>
+  </g>
+
+  <!-- Card 6: ขอบคุณ -->
+  <g>
+    <rect x="215" y="334" width="175" height="246" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect x="215" y="334" width="175" height="9" rx="4" fill="#0891b2"/>
+    <text x="302" y="414" font-size="42" font-weight="700" fill="#0f172a" text-anchor="middle">ขอบคุณ</text>
+    <text x="302" y="452" font-size="18" fill="#0891b2" text-anchor="middle">khɔ̀ɔp-khun</text>
+    <text x="302" y="492" font-size="18" fill="#475569" text-anchor="middle">thank you</text>
+    <text x="302" y="536" font-size="24" fill="#b91c1c" text-anchor="middle">謝謝</text>
+  </g>
+
+  <!-- Card 7: ยินดีที่ได้รู้จัก -->
+  <g>
+    <rect x="408" y="334" width="175" height="246" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect x="408" y="334" width="175" height="9" rx="4" fill="#16a34a"/>
+    <text x="495" y="405" font-size="28" font-weight="700" fill="#0f172a" text-anchor="middle">ยินดีที่</text>
+    <text x="495" y="438" font-size="28" font-weight="700" fill="#0f172a" text-anchor="middle">ได้รู้จัก</text>
+    <text x="495" y="468" font-size="15" fill="#16a34a" text-anchor="middle">yin-dii thîi dâai rúu-jàk</text>
+    <text x="495" y="500" font-size="16" fill="#475569" text-anchor="middle">nice to meet you</text>
+    <text x="495" y="540" font-size="22" fill="#b91c1c" text-anchor="middle">很高興認識你</text>
+  </g>
+
+  <!-- Card 8: แล้วเจอกัน -->
+  <g>
+    <rect x="601" y="334" width="175" height="246" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect x="601" y="334" width="175" height="9" rx="4" fill="#16a34a"/>
+    <text x="688" y="414" font-size="33" font-weight="700" fill="#0f172a" text-anchor="middle">แล้วเจอกัน</text>
+    <text x="688" y="452" font-size="18" fill="#16a34a" text-anchor="middle">láeo-jəə-gan</text>
+    <text x="688" y="492" font-size="18" fill="#475569" text-anchor="middle">see you later</text>
+    <text x="688" y="536" font-size="24" fill="#b91c1c" text-anchor="middle">再見</text>
+  </g>
+</svg>

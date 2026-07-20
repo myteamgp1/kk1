@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" font-family="'Noto Sans Thai', 'Noto Sans', sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="600" fill="#f4f7fb"/>
+
+  <!-- Title -->
+  <text x="400" y="38" font-size="27" font-weight="700" fill="#1e293b" text-anchor="middle">บทสนทนา A — พบกันครั้งแรก (Dialogue A)</text>
+
+  <!-- Column headers -->
+  <text x="210" y="66" font-size="20" font-weight="700" fill="#2563eb" text-anchor="middle">สมชาย (ชาย)</text>
+  <text x="590" y="66" font-size="20" font-weight="700" fill="#db2777" text-anchor="middle">แอนนา (หญิง)</text>
+
+  <!-- Connector arrows (zigzag) -->
+  <g stroke="#94a3b8" stroke-width="2" fill="none">
+    <line x1="230" y1="140" x2="570" y2="150" marker-end="url(#arrow)"/>
+    <line x1="570" y1="206" x2="230" y2="216" marker-end="url(#arrow)"/>
+    <line x1="230" y1="300" x2="570" y2="310" marker-end="url(#arrow)"/>
+    <line x1="570" y1="396" x2="230" y2="406" marker-end="url(#arrow)"/>
+    <line x1="230" y1="452" x2="570" y2="462" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- T1 Somchai (L) -->
+  <rect x="40" y="80" width="340" height="58" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="56" y="100" font-size="15" fill="#2563eb">1 · สมชาย</text>
+  <text x="210" y="126" font-size="30" fill="#0f172a" text-anchor="middle">สวัสดีครับ</text>
+
+  <!-- T2 Anna (R) -->
+  <rect x="420" y="148" width="340" height="58" rx="12" fill="#fdf2f8" stroke="#db2777" stroke-width="1.5"/>
+  <text x="436" y="168" font-size="15" fill="#db2777">2 · แอนนา</text>
+  <text x="590" y="194" font-size="30" fill="#0f172a" text-anchor="middle">สวัสดีค่ะ</text>
+
+  <!-- T3 Somchai (L) 2 lines -->
+  <rect x="40" y="216" width="340" height="86" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="56" y="236" font-size="15" fill="#2563eb">3 · สมชาย</text>
+  <text x="210" y="264" font-size="28" fill="#0f172a" text-anchor="middle">ผมชื่อสมชายครับ</text>
+  <text x="210" y="294" font-size="28" fill="#0f172a" text-anchor="middle">คุณชื่ออะไรครับ</text>
+
+  <!-- T4 Anna (R) 2 lines -->
+  <rect x="420" y="312" width="340" height="86" rx="12" fill="#fdf2f8" stroke="#db2777" stroke-width="1.5"/>
+  <text x="436" y="332" font-size="15" fill="#db2777">4 · แอนนา</text>
+  <text x="590" y="360" font-size="28" fill="#0f172a" text-anchor="middle">ฉันชื่อแอนนาค่ะ</text>
+  <text x="590" y="390" font-size="28" fill="#0f172a" text-anchor="middle">ชื่อเล่นชื่อแอนค่ะ</text>
+
+  <!-- T5 Somchai (L) -->
+  <rect x="40" y="408" width="340" height="58" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="56" y="428" font-size="15" fill="#2563eb">5 · สมชาย</text>
+  <text x="210" y="454" font-size="28" fill="#0f172a" text-anchor="middle">ยินดีที่ได้รู้จักครับ</text>
+
+  <!-- T6 Anna (R) -->
+  <rect x="420" y="476" width="340" height="58" rx="12" fill="#fdf2f8" stroke="#db2777" stroke-width="1.5"/>
+  <text x="436" y="496" font-size="15" fill="#db2777">6 · แอนนา</text>
+  <text x="590" y="522" font-size="30" fill="#0f172a" text-anchor="middle">เช่นกันค่ะ</text>
+
+  <!-- Legend / rule -->
+  <rect x="40" y="548" width="720" height="40" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <rect x="56" y="560" width="22" height="16" rx="3" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="86" y="573" font-size="18" fill="#334155">ชาย → ครับ (ทุกประโยค)</text>
+  <rect x="360" y="560" width="22" height="16" rx="3" fill="#fdf2f8" stroke="#db2777"/>
+  <text x="390" y="573" font-size="18" fill="#334155">หญิง → ค่ะ (บอกเล่า) / คะ (คำถาม)</text>
+</svg>

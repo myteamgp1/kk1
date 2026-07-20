@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" font-family="'Noto Sans Thai', 'Noto Sans', sans-serif">
+  <rect width="800" height="600" fill="#f4f7fb"/>
+
+  <!-- Title -->
+  <text x="400" y="40" font-size="30" font-weight="700" fill="#1e293b" text-anchor="middle">ท่าไหว้ 3 ระดับ (The Three Wai Levels)</text>
+  <text x="400" y="70" font-size="18" fill="#475569" text-anchor="middle">ยิ่งเคารพมาก มือยิ่งสูง · ผู้น้อยเป็นฝ่ายไหว้ก่อน</text>
+
+  <!-- ============ PANEL 1: chest (blue) ============ -->
+  <rect x="20" y="88" width="240" height="402" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <!-- body -->
+  <path d="M100,358 L108,255 Q140,224 172,255 L180,358 Z" fill="#3b82f6"/>
+  <!-- head -->
+  <circle cx="140" cy="170" r="32" fill="#f4c9a3" stroke="#b45309" stroke-width="1.5"/>
+  <circle cx="130" cy="166" r="3" fill="#5b3b1a"/>
+  <circle cx="150" cy="166" r="3" fill="#5b3b1a"/>
+  <path d="M132,180 Q140,186 148,180" fill="none" stroke="#5b3b1a" stroke-width="2"/>
+  <!-- fingertip guide -->
+  <line x1="70" y1="250" x2="210" y2="250" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <!-- arms -->
+  <line x1="112" y1="258" x2="130" y2="300" stroke="#f4c9a3" stroke-width="12" stroke-linecap="round"/>
+  <line x1="168" y1="258" x2="150" y2="300" stroke="#f4c9a3" stroke-width="12" stroke-linecap="round"/>
+  <!-- praying hands at chest -->
+  <path d="M140,250 C120,266 122,296 140,304 C158,296 160,266 140,250 Z" fill="#fbe0c2" stroke="#b45309" stroke-width="1.5"/>
+  <line x1="140" y1="252" x2="140" y2="302" stroke="#b45309" stroke-width="1.5"/>
+  <!-- labels -->
+  <text x="140" y="400" font-size="24" font-weight="700" fill="#2563eb" text-anchor="middle">ระดับ 1</text>
+  <text x="140" y="438" font-size="32" font-weight="700" fill="#0f172a" text-anchor="middle">อก</text>
+  <text x="140" y="460" font-size="17" fill="#64748b" text-anchor="middle">chest / neck level</text>
+  <text x="140" y="483" font-size="17" fill="#475569" text-anchor="middle">เพื่อน · คนเท่ากัน</text>
+
+  <!-- ============ PANEL 2: nose (green) ============ -->
+  <rect x="280" y="88" width="240" height="402" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <!-- body -->
+  <path d="M360,358 L368,255 Q400,224 432,255 L440,358 Z" fill="#10b981"/>
+  <!-- head -->
+  <circle cx="400" cy="170" r="32" fill="#f4c9a3" stroke="#b45309" stroke-width="1.5"/>
+  <circle cx="390" cy="166" r="3" fill="#5b3b1a"/>
+  <circle cx="410" cy="166" r="3" fill="#5b3b1a"/>
+  <!-- fingertip guide at nose -->
+  <line x1="330" y1="163" x2="470" y2="163" stroke="#10b981" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <!-- arms up -->
+  <line x1="372" y1="258" x2="388" y2="215" stroke="#f4c9a3" stroke-width="12" stroke-linecap="round"/>
+  <line x1="428" y1="258" x2="412" y2="215" stroke="#f4c9a3" stroke-width="12" stroke-linecap="round"/>
+  <!-- praying hands at nose -->
+  <path d="M400,160 C380,176 382,206 400,214 C418,206 420,176 400,160 Z" fill="#fbe0c2" stroke="#b45309" stroke-width="1.5"/>
+  <line x1="400" y1="162" x2="400" y2="212" stroke="#b45309" stroke-width="1.5"/>
+  <!-- labels -->
+  <text x="400" y="400" font-size="24" font-weight="700" fill="#059669" text-anchor="middle">ระดับ 2</text>
+  <text x="400" y="438" font-size="32" font-weight="700" fill="#0f172a" text-anchor="middle">จมูก</text>
+  <text x="400" y="460" font-size="17" fill="#64748b" text-anchor="middle">nose / chin level</text>
+  <text x="400" y="483" font-size="17" fill="#475569" text-anchor="middle">ผู้ใหญ่ · ครู · เจ้านาย</text>
+
+  <!-- ============ PANEL 3: eyebrows (amber) ============ -->
+  <rect x="540" y="88" width="240" height="402" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <!-- body -->
+  <path d="M620,358 L628,255 Q660,224 692,255 L700,358 Z" fill="#f59e0b"/>
+  <!-- head -->
+  <circle cx="660" cy="172" r="32" fill="#f4c9a3" stroke="#b45309" stroke-width="1.5"/>
+  <circle cx="650" cy="170" r="3" fill="#5b3b1a"/>
+  <circle cx="670" cy="170" r="3" fill="#5b3b1a"/>
+  <!-- fingertip guide at eyebrows -->
+  <line x1="590" y1="140" x2="730" y2="140" stroke="#d97706" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <!-- arms up high -->
+  <line x1="632" y1="258" x2="648" y2="196" stroke="#f4c9a3" stroke-width="12" stroke-linecap="round"/>
+  <line x1="688" y1="258" x2="672" y2="196" stroke="#f4c9a3" stroke-width="12" stroke-linecap="round"/>
+  <!-- praying hands at forehead -->
+  <path d="M660,138 C640,154 642,184 660,192 C678,184 680,154 660,138 Z" fill="#fbe0c2" stroke="#b45309" stroke-width="1.5"/>
+  <line x1="660" y1="140" x2="660" y2="190" stroke="#b45309" stroke-width="1.5"/>
+  <!-- labels -->
+  <text x="660" y="400" font-size="24" font-weight="700" fill="#d97706" text-anchor="middle">ระดับ 3</text>
+  <text x="660" y="438" font-size="32" font-weight="700" fill="#0f172a" text-anchor="middle">หว่างคิ้ว</text>
+  <text x="660" y="460" font-size="17" fill="#64748b" text-anchor="middle">eyebrow / forehead</text>
+  <text x="660" y="483" font-size="17" fill="#475569" text-anchor="middle">พระ · ราชวงศ์ · พระพุทธรูป</text>
+
+  <!-- ============ Bottom banner ============ -->
+  <rect x="20" y="502" width="760" height="80" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="400" y="532" font-size="21" fill="#92400e" text-anchor="middle">ผู้น้อยไหว้ก่อน · ผู้ใหญ่รับไหว้ที่ระดับต่ำกว่า หรือพยักหน้ารับ</text>
+  <text x="400" y="562" font-size="18" fill="#92400e" text-anchor="middle">พนักงานบริการไหว้เราก่อน → ตอบด้วยยิ้ม พยักหน้า และ ขอบคุณครับ/ค่ะ (ไม่ไหว้กลับเต็มรูปแบบ)</text>
+</svg>

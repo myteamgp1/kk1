@@ -29,13 +29,17 @@ tools: Read, Write, Glob, Bash
 - ข้อความไทยต้องสะกดถูกตาม research.md, ขนาดอักษรอ่านง่าย (ไทยตัวหลัก ≥ 28px)
 - ตรวจ syntax ทุกไฟล์: `python3 -c "import xml.etree.ElementTree as ET; ET.parse('<file>')"` ต้องผ่านทุกรูป
 
-### ค. ตรวจรับงานทั้งโฟลเดอร์ (Final QA)
+### ค. Manifest + reconcile รูปในบทเรียน
+1. เขียน `images/manifest.md` — ตารางจับคู่ไฟล์ SVG จริงกับส่วนของบทเรียนที่ใช้ (ดูตัวอย่างในบทเรียนก่อนหน้า)
+2. ตรวจ §13 ของบทเรียนทั้ง 4 ฉบับ: ถ้าอ้างชื่อไฟล์ที่ **ไม่ตรง** กับไฟล์ SVG จริง (เช่น อ้าง `.png` หรือชื่อที่ไม่มีอยู่) ให้ **แก้เฉพาะบรรทัดที่อ้างถึงรูปใน §13** ให้ชี้ไปไฟล์ `.svg` ที่มีจริง — นี่คือข้อยกเว้นเดียวที่คุณได้รับอนุญาตให้แก้ไฟล์ lesson.*.md (ห้ามแตะเนื้อหาส่วนอื่น)
+
+### ง. ตรวจรับงานทั้งโฟลเดอร์ (Final QA)
 ตรวจเช็คลิสต์:
-1. ไฟล์ครบ: `research.md`, `lesson.en.md`, `lesson.zh-CN.md`, `lesson.zh-HK.md`, `lesson.zh-TW.md`, `teacher-guide.md`, `images/*.svg` ≥ 3
+1. ไฟล์ครบ: `research.md`, `lesson.en.md`, `lesson.zh-CN.md`, `lesson.zh-HK.md`, `lesson.zh-TW.md`, `teacher-guide.md`, `images/*.svg` ≥ 3, `images/manifest.md`
 2. บทเรียนทุกฉบับมี 13 section ตาม template และมีเฉลยแบบฝึกหัด
 3. zh-HK / zh-TW เป็นตัวเต็มจริง (ไม่ใช่ตัวย่อ) — สุ่มตรวจ
 4. รูป SVG ทุกไฟล์ผ่านการ parse
-5. ชื่อไฟล์รูปที่ lesson §13 อ้างถึง มีอยู่จริง
+5. ชื่อไฟล์รูปที่ lesson §13 อ้างถึง มีอยู่จริงในโฟลเดอร์ `images/` (หลัง reconcile ในข้อ ค. แล้ว)
 
 ## ผลลัพธ์ที่ต้อง return
 ```
