@@ -154,6 +154,8 @@ table.vocab td.rom { white-space: nowrap; }
   padding: 8px 12px;
   background: #f2f8f8;
   margin: 8px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
 }
 .pattern-box .formula {
   font-weight: 700;
@@ -165,6 +167,7 @@ table.vocab td.rom { white-space: nowrap; }
 .dialogue .turn {
   display: flex;
   margin-bottom: 7px;
+  break-inside: avoid;
   page-break-inside: avoid;
 }
 .dialogue .speaker {
@@ -185,7 +188,11 @@ table.vocab td.rom { white-space: nowrap; }
 
 /* ---------- Exercises ---------- */
 ol.exercise { padding-left: 20px; }
-ol.exercise li { margin-bottom: 6px; }
+ol.exercise li {
+  margin-bottom: 6px;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
 .blank {
   display: inline-block;
   min-width: 70px;
@@ -198,6 +205,7 @@ ol.exercise li { margin-bottom: 6px; }
   padding: 8px 12px;
   margin: 8px 0;
   font-size: 9.5pt;
+  break-inside: avoid;
   page-break-inside: avoid;
 }
 .culture-box {
@@ -221,6 +229,7 @@ ol.exercise li { margin-bottom: 6px; }
   padding: 8px 12px;
   background: #fff8f3;
   margin: 10px 0;
+  break-inside: avoid;
   page-break-inside: avoid;
 }
 .homework-box .box-title {
@@ -253,7 +262,23 @@ footer.tone-legend .warn { color: #b3541e; }
   margin: 0 1px;
 }
 
-/* ---------- Print behavior ---------- */
+/* ---------- Print behavior ----------
+   Keep every boxed unit and every heading glued to its content so no card,
+   dialogue turn, or table row is ever split across a page break. */
 .page-break { page-break-before: always; }
-h2, h3 { page-break-after: avoid; }
-table.vocab tr { page-break-inside: avoid; }
+
+/* Headings never end a page orphaned from the content they introduce */
+h2, h3 {
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+/* Table rows and the header row stay intact */
+table.vocab tr {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+table.vocab thead { display: table-header-group; } /* repeat header if a table spans pages */
+
+/* Paragraphs don't leave a single dangling line at a page edge */
+p { orphans: 2; widows: 2; }

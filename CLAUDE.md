@@ -88,6 +88,11 @@ takeaway MUST update the corresponding INDEX.md row in the same change.
 - [ ] Paiboon specials render: ɛ ɔ ə ʉ and à â á ǎ
 - [ ] tone-legend footer present at the end
 - [ ] page count ≤ 3 (target 2)
+- [ ] **no boxed unit split across a page break** — every pattern box,
+  culture/tip/homework box, and dialogue turn stays whole; no section
+  heading is left orphaned at the foot of a page. (The shared CSS enforces
+  this with `break-inside: avoid`; if a new box class is added, give it the
+  same rule.)
 
 If tofu appears: check `assets/fonts/` files exist → check the CSS link path
 from the lesson folder → check `make_pdf.sh` output size (< 50 KB means fonts
