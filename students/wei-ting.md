@@ -8,7 +8,7 @@
 | **Level** | beginner (12 lessons in) |
 | **Goal** | Travels to Bangkok 3–4× a year for work; wants street/survival Thai |
 | **Chinese gloss script** | Traditional |
-| **Schedule** | Tue + Sat 20:30 (GMT+8), 1-on-1 |
+| **Schedule** | Sun + Mon 20:30 (GMT+8), small group with Anna |
 | **Contact channel** | LINE |
 
 ## Standing notes

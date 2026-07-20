@@ -59,11 +59,11 @@
 - ผัด: ผ high, dead short → low → phàt ✓ · กะ: ก mid, dead short → low → gà ✓ · เพรา: พ low (พร cluster), live → mid → phrao ✓
 - ไข่: ข high + ่ → low → khài ✓ · ดาว: ด mid, live → mid → daao ✓
 - เผ็ด: ผ high, dead short → low → phèt ✓
-- อร่อย: อ นำ ร (irregular set) → mid-class rules + ่ → low → à-rɔ̀i ✓
+- อร่อย: อ นำ ร (irregular set) → mid-class rules + ่ → low → à-rɔ̀ɔi ✓
 - น้ำ: น low + ้ → high → náam ✓ (vowel irregularly long) · เปล่า: ป mid (ปล cluster) + ่ → low → bplàao ✓
 - เอา: อ mid, live → mid → ao ✓ · ขอ: ข high, live → rising → khɔ̌ɔ ✓
 - เท่า: ท low + ่ → falling → thâo ✓ · ไหร่: ห นำ ร + ่ → low → rài ✓
-- ไม่: ม low + ่ → falling → mâi ✓ · นิด: น low, dead short → high → nít ✓ · หน่อย: ห นำ น + ่ → low → nɔ̀i ✓ · มาก: ม low, dead long → falling → mâak ✓
+- ไม่: ม low + ่ → falling → mâi ✓ · นิด: น low, dead short → high → nít ✓ · หน่อย: ห นำ น + ่ → low → nɔ̀ɔi ✓ · มาก: ม low, dead long → falling → mâak ✓
 - ใส่: ส high + ่ → low → sài ✓ · ด้วย: ด mid + ้ → falling → dûai ✓ · แล้ว: ล low + ้ → high → lɛ́ɛo ✓
 - ทั้ง: ท low + ้ → high → tháng ✓ · หมด: ห นำ ม, dead short → low → mòt ✓
 - หก: ห high, dead short → low → hòk ✓ · สิบ: ส high, dead short → low → sìp ✓ · บาท: บ mid, dead long → low → bàat ✓

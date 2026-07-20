@@ -40,17 +40,27 @@ if [[ -z "$CHROMIUM" ]]; then
   exit 1
 fi
 
-"$CHROMIUM" \
+# Chromium is noisy on stderr even on success — keep it, show it only on failure.
+ERRLOG="$(mktemp)"
+trap 'rm -f "$ERRLOG"' EXIT
+
+if ! "$CHROMIUM" \
   --headless \
   --no-sandbox \
   --disable-gpu \
   --no-pdf-header-footer \
   --virtual-time-budget=10000 \
   --print-to-pdf="$OUT" \
-  "file://$IN_ABS" 2>/dev/null
+  "file://$IN_ABS" 2>"$ERRLOG"; then
+  echo "error: Chromium exited nonzero; its stderr follows:" >&2
+  cat "$ERRLOG" >&2
+  exit 1
+fi
 
+# Chromium can exit 0 yet fail to write the PDF ("Failed to write PDF" only on stderr)
 if [[ ! -f "$OUT" ]]; then
-  echo "error: Chromium produced no output" >&2
+  echo "error: Chromium produced no output; its stderr follows:" >&2
+  cat "$ERRLOG" >&2
   exit 1
 fi
 

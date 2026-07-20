@@ -49,7 +49,7 @@ p/t/k aspirated):
 | ก | g | unaspirated k — pinyin **g** (哥) |
 | ข ฃ ค ฅ ฆ | kh | aspirated — pinyin **k** (科) |
 | ง | ng | as in si**ng**; can start a syllable (งู nguu) |
-| จ | j | unaspirated ch — pinyin **z/j**-ish (机) |
+| จ | j | unaspirated ch — pinyin **z/j**-ish (機) |
 | ฉ ช ฌ | ch | aspirated — pinyin **q/ch** (七) |
 | ซ ศ ษ ส | s | s |
 | ญ ย | y | y |
@@ -121,7 +121,7 @@ Diphthongs / specials:
 | แอว | ɛɛo | แมว mɛɛo |
 | เอียว | iao | เดี๋ยว dǐao |
 | อุย | ui | คุย khui |
-| โอย / ออย | ooi / ɔɔi | อร่อย à-rɔ̀i |
+| โอย / ออย | ooi / ɔɔi | อร่อย à-rɔ̀ɔi |
 | เอย | əəi | เลย ləəi |
 | อวย | uai | ช่วย chûai |
 
@@ -183,7 +183,7 @@ letter (กล้วย = mid class → glûai).
 ## 5. Formatting conventions
 
 - Thai script always appears FIRST and visually dominant; romanization is scaffolding below/beside it.
-- Multi-syllable words: hyphenate syllables (à-rɔ̀i, thâo-rài, gà-prao).
+- Multi-syllable words: hyphenate syllables (à-rɔ̀ɔi, thâo-rài, gà-phrao).
 - Polite particles: ครับ khráp / ค่ะ khâ / คะ khá — always show both in dialogues.
 - Unwritten inherent vowels are romanized as pronounced: ถนน thà-nǒn.
 - Irregular pronunciations follow SOUND, not spelling (น้ำ náam not nám, ไทย thai).

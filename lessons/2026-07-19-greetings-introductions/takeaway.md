@@ -64,6 +64,6 @@ Key phrases:
 🔊 Pronunciation tip: the accent marks are NOT pinyin!
 á = HIGH tone, à = LOW tone. Check the legend at the bottom of your handout.
 
-✏️ Homework: 4-sentence self-intro voice message, due Mon 2026-07-21.
+✏️ Homework: 4-sentence self-intro voice message, due Tue 2026-07-21.
 Great work today! เก่งมาก 👏
 ```

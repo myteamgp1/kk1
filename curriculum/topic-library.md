@@ -40,7 +40,7 @@ Levels: **B** beginner · **HB** high-beginner · **I** intermediate
 | Topic | Level | Core patterns | Recycles from | Notes |
 |---|---|---|---|---|
 | Small talk & compliments | HB | เก่ง, สวย/หล่อ, น่ารัก | Greetings | Particle นะ softening |
-| Likes & dislikes | B | ชอบ/ไม่ชอบ, …ที่สุด | — | ชอบ + V and ชอบ + N both work — unlike 喜歡 nuance |
+| Likes & dislikes | B | ชอบ/ไม่ชอบ, …ที่สุด | — | ชอบ maps directly to 喜歡 (+N/+V both work); new nuance: ชอบ + V also means "tends to / often" (เขาชอบมาสาย = he's often late) |
 | Making plans with friends | HB | ไป…กันไหม, เจอกัน | Time, Dates | |
 | Phone & LINE language | HB | ฮัลโหล, เดี๋ยวโทรกลับ | Plans | Texting slang (555 = hahaha) delights students |
 | Office & meetings | I | ประชุม, เลื่อน, ส่งเมล | Time, Dates | For work-focused students |

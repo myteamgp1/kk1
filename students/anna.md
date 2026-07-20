@@ -8,7 +8,7 @@
 | **Level** | beginner (12 lessons in) |
 | **Goal** | Moving to Chiang Mai next year (remote work); daily-life Thai |
 | **Chinese gloss script** | Traditional |
-| **Schedule** | Tue + Sat 20:30 (GMT+8), small group with Wei-Ting |
+| **Schedule** | Sun + Mon 20:30 (GMT+8), small group with Wei-Ting |
 | **Contact channel** | WhatsApp |
 
 ## Standing notes

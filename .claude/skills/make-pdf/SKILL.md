@@ -36,7 +36,8 @@ Open the produced PDF with the Read tool and verify (CLAUDE.md checklist):
    root? (Font paths are relative to the CSS file.)
 3. `tools/make_pdf.sh` found a Chromium binary? (It probes
    `/opt/pw-browsers/…` then PATH.)
-4. Still failing → rerun with the script's stderr visible and read the error.
+4. Still failing → rerun and read the Chromium stderr the script prints on
+   failure (it captures and surfaces it automatically).
 
 ## Step 5 — Report
 

@@ -98,7 +98,7 @@ Thai and Chinese are typologically close; students should feel this as "easy":
 - **Classifiers**: Thai ตัว/คน/อัน ≈ Chinese 隻/個 measure words. Structure
   differs slightly: Thai = NOUN + NUMBER + CLF (หมา 2 ตัว), Chinese =
   NUMBER + CLF + NOUN (兩隻狗). Same concept, reversed order — one slide fixes it.
-- **Final particles**: ครับ/ค่ะ/นะ/ล่ะ sit where 吗/呢/吧/啊 sit — familiar feel.
+- **Final particles**: ครับ/ค่ะ/นะ/ล่ะ sit where 嗎/呢/吧/啊 sit — familiar feel.
   New: Thai politeness particles are **speaker-gender-based** (male ครับ khráp,
   female ค่ะ khâ / question คะ khá) — no Chinese equivalent, drill early.
 

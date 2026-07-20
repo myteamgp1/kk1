@@ -30,10 +30,10 @@ Tone anchors to say out loud:
 - หมู mǔu: "rising — like Mandarin 2nd tone 麻. Anna — make it really rise."
 - เผ็ด phèt: "low and SHORT, and the -t just stops — Anna, do your Cantonese
   一 jat ending. Wei-Ting, no puff at the end: phèt̚, not phè-tə."
-- อร่อย à-rɔ̀i: "both syllables low. ɔ is the *law* vowel — rounder than o."
+- อร่อย à-rɔ̀ɔi: "both syllables low. ɔ is the *law* vowel — rounder than o, and long here."
 
 Board/screen text: type the spice ladder in chat:
-ไม่เผ็ด mâi phèt → เผ็ดนิดหน่อย phèt nít nɔ̀i → เผ็ดมาก phèt mâak
+ไม่เผ็ด mâi phèt → เผ็ดนิดหน่อย phèt nít nɔ̀ɔi → เผ็ดมาก phèt mâak
 
 Patterns (Handout §3), plain-English framing:
 - "ขอ khɔ̌ɔ = *may I have* — the magic word. ขอ + food + ครับ/ค่ะ and you're polite everywhere."
@@ -91,4 +91,4 @@ If it stalls, feed: "Ask if it's spicy — เผ็ดไหม?"
    script. Due Wednesday.
 4. Preview: "Next: numbers & bargaining — so you can argue about the price
    like a local. Anna, that's your market lesson."
-5. End: "เก่งมากครับ! See you Saturday."
+5. End: "เก่งมากครับ! See you next time — เจอกันใหม่!"
