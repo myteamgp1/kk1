@@ -1,1 +1,5 @@
 date,topic_slug,student_email,language,mode,notes
+2026-07-20,thai-greetings,alice.johnson@example.com,en,file,demo sample student — email file only, no Gmail draft yet
+2026-07-20,thai-greetings,li.wei@example.com,zh-CN,file,demo sample student — email file only, no Gmail draft yet
+2026-07-20,thai-greetings,chan.taiman@example.com,zh-HK,file,demo sample student — email file only, no Gmail draft yet
+2026-07-20,thai-greetings,lin.meiling@example.com,zh-TW,file,demo sample student — email file only, no Gmail draft yet
