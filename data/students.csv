@@ -1,0 +1,5 @@
+name,email,language,status,start_date,notes
+Alice Johnson,alice.johnson@example.com,en,new,2026-07-20,ตัวอย่าง — แก้เป็นข้อมูลนักเรียนจริง
+Li Wei,li.wei@example.com,zh-CN,new,2026-07-20,ตัวอย่าง — แก้เป็นข้อมูลนักเรียนจริง
+Chan Tai Man,chan.taiman@example.com,zh-HK,returning,2026-05-01,ตัวอย่าง — นักเรียนเก่า เริ่มเรียนพฤษภาคม
+Lin Mei-ling,lin.meiling@example.com,zh-TW,returning,2026-04-15,ตัวอย่าง — นักเรียนเก่า เริ่มเรียนเมษายน
