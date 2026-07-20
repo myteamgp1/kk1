@@ -243,6 +243,16 @@ footer.tone-legend {
 }
 footer.tone-legend .warn { color: #b3541e; }
 
+/* ---------- Doodles (inline SVG line-art, generated locally — no external images) ---------- */
+.doodle {
+  float: right;
+  margin: 0 0 6px 12px;
+}
+.doodle-icon {
+  vertical-align: -4px;
+  margin: 0 1px;
+}
+
 /* ---------- Print behavior ---------- */
 .page-break { page-break-before: always; }
 h2, h3 { page-break-after: avoid; }

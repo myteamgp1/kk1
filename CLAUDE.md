@@ -46,6 +46,13 @@ tools/make_pdf.sh             HTML → PDF renderer (bundled Chromium, bundled f
    wording; handout = student content. The other files reference by section
    ("drill the vocab in Handout §2"), never copy.
 7. **Politeness particles**: dialogues always show ครับ/ค่ะ variants.
+8. **Illustrations = inline SVG doodles only.** Simple hand-drawn-style
+   line art (stroke-based, `stroke-linecap="round"`, theme colors #14636b /
+   #b3541e), drawn directly in the handout HTML. Never link external images,
+   never use raster files — SVG renders perfectly in the PDF pipeline, costs
+   nothing, and is editable by prompt. Use the `.doodle` (floated) and
+   `.doodle-icon` (inline) classes from assets/handout.css. 1–3 doodles per
+   handout, always decorative-supportive, never load-bearing for meaning.
 8. Naming: lesson folders `YYYY-MM-DD-<kebab-slug>`; status in INDEX.md flows
    `prepped → taught → recapped`.
 

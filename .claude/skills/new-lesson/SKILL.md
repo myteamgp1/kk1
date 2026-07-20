@@ -47,6 +47,10 @@ dialogue with ครับ/ค่ะ variants, warm-up items pulled from the
 spaced-repetition queue, Thai script first everywhere. Include at least one
 tone minimal-pair drill built from this lesson's own vocab.
 
+Illustrations: add 1–3 simple inline SVG doodles tied to the topic (see
+CLAUDE.md rule 8 and the street-food lesson for style examples — stroke-based
+line art, `.doodle` / `.doodle-icon` classes). No external images ever.
+
 ## Step 4 — Linguistic QA (mandatory)
 
 For EVERY Thai item in vocab, patterns, and dialogue:
