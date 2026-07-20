@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>{{TOPIC}} — Thai Lesson Handout</title>
+<!-- Copied into lessons/YYYY-MM-DD-<slug>/handout.html → this relative path resolves -->
+<link rel="stylesheet" href="../../assets/handout.css">
+</head>
+<body>
+
+<header class="handout-header">
+  <h1>{{TOPIC — ENGLISH TITLE}} · <span class="th">{{หัวข้อภาษาไทย}}</span></h1>
+  <p class="subtitle">{{CAN-DO GOAL, e.g. "By the end of this lesson you can order food at a Thai street stall."}}</p>
+  <p class="meta">Thai with Mos · {{DATE}} · 1-hour lesson</p>
+</header>
+
+<section id="s1">
+  <h2>1 · Today's goal</h2>
+  <p>{{2–3 sentences setting the scene, in simple English.}}</p>
+</section>
+
+<section id="s2">
+  <h2>2 · Vocabulary</h2>
+  <table class="vocab">
+    <tr><th>Thai</th><th>Paiboon</th><th>English</th><th>中文</th></tr>
+    <tr><td class="th">{{คำ}}</td><td class="rom">{{rom}}</td><td>{{gloss}}</td><td class="zh">{{中文}}</td></tr>
+    <!-- 8–12 rows total (CLAUDE.md rule) -->
+  </table>
+</section>
+
+<section id="s3">
+  <h2>3 · Patterns</h2>
+  <div class="pattern-box">
+    <p class="formula"><span class="th">{{THAI PATTERN}}</span> — <span class="rom">{{rom pattern}}</span></p>
+    <p>{{One-line usage note}} · <span class="th">{{ตัวอย่าง}}</span> <span class="rom">{{rom}}</span> = {{English}}</p>
+  </div>
+  <!-- 2–4 pattern boxes -->
+</section>
+
+<section id="s4">
+  <h2>4 · Dialogue</h2>
+  <div class="dialogue">
+    <div class="turn">
+      <div class="speaker">{{WHO}}</div>
+      <div class="lines">
+        <span class="th">{{บทพูดภาษาไทย}}</span>
+        <span class="rom">{{romanization}}</span>
+        <span class="en">{{English gloss}}</span>
+      </div>
+    </div>
+    <!-- 8–12 turns -->
+  </div>
+</section>
+
+<section id="s5">
+  <h2>5 · Practice</h2>
+  <ol class="exercise">
+    <li>{{Exercise item — e.g. fill the blank: ขอ <span class="blank"></span> ครับ}}</li>
+    <!-- answers go in lesson-plan.md answer key, never here -->
+  </ol>
+</section>
+
+<section id="s6">
+  <div class="culture-box">
+    <span class="box-title">🇹🇭 Culture corner</span>
+    {{Short cultural note tied to the topic.}}
+  </div>
+  <div class="tip-box">
+    <span class="box-title">💡 Pronunciation tip</span>
+    {{One tip, ideally anchored to Mandarin/Cantonese per pedagogy reference.}}
+  </div>
+</section>
+
+<section id="s7">
+  <div class="homework-box">
+    <span class="box-title">✏️ Homework</span>
+    {{Deliverable + how to send it (voice message etc.) + due date.}}
+  </div>
+</section>
+
+<footer class="tone-legend">
+  Paiboon tones: <b>aa</b> mid · <b>àa</b> low · <b>âa</b> falling · <b>áa</b> high · <b>ǎa</b> rising &nbsp;|&nbsp;
+  <span class="warn">⚠ Not pinyin! Here á = HIGH (not rising), à = LOW (not falling)</span> &nbsp;|&nbsp;
+  Doubled vowels = long (aa), single = short (a)
+</footer>
+
+</body>
+</html>
