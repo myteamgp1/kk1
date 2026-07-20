@@ -1,6 +1,6 @@
 To: lin.meiling@example.com
 Subject: 【泰語課 2026-07-20】打招呼與自我介紹——今日複習
-Language: zh-TW | Status: returning | Draft-created: no
+Language: zh-TW | Status: returning | Draft-created: yes
 ---
 Mei-ling 你好，
 

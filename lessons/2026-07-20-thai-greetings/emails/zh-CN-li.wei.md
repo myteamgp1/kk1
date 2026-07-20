@@ -1,6 +1,6 @@
 To: li.wei@example.com
 Subject: 【泰语课 2026-07-20】问候与自我介绍——今日复习
-Language: zh-CN | Status: new | Draft-created: no
+Language: zh-CN | Status: new | Draft-created: yes
 ---
 Li Wei 你好，
 

@@ -1,6 +1,6 @@
 To: chan.taiman@example.com
 Subject: 【泰文課 2026-07-20】打招呼同自我介紹——今日溫習
-Language: zh-HK | Status: returning | Draft-created: no
+Language: zh-HK | Status: returning | Draft-created: yes
 ---
 陳先生你好，
 

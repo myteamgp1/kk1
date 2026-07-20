@@ -1,6 +1,6 @@
 To: alice.johnson@example.com
 Subject: [Thai Lesson 2026-07-20] Greetings & Introductions — your recap 🇹🇭
-Language: en | Status: new | Draft-created: no
+Language: en | Status: new | Draft-created: yes
 ---
 Hi Alice,
 
